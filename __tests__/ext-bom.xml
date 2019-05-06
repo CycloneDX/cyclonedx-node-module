@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bom xmlns="http://cyclonedx.org/schema/bom/1.0" version="1">
+    <components>
+        <component type="library">
+            <group>external-bom</group>
+            <name>package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>

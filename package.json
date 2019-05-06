@@ -30,7 +30,7 @@
     "cyclonedx-bom": "./bin/cyclonedx-bom"
   },
   "scripts": {
-    "test": "echo \"Warning: no test specified\" && exit 0"
+    "test": "jest"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -47,5 +47,8 @@
     "prettify-xml": "^1.2.0",
     "read-installed": "^4.0.3",
     "ssri": "^6.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
   }
 }

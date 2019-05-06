@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cyclonedx-bom BOM is valid package without dependencies 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom BOM is valid simple package 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom BOM is valid simple package including devDependencies chane path and options order, -d 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <name>empty-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/empty-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom BOM is valid simple package including devDependencies, -d 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <name>empty-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/empty-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom additional modules, -a -a adds modules from external BOM to empty bom 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>external-bom</group>
+            <name>package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom additional modules, -a -a adds modules from external BOM to simple bom 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <group>external-bom</group>
+            <name>package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom additional modules, -a -a adds modules from external BOM to simple bom with devDependencies 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <name>empty-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/empty-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <group>external-bom</group>
+            <name>package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom additional modules, -a multiple additional BOMs 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.0\\" version=\\"1\\">
+    <components>
+        <component type=\\"library\\">
+            <group>scope</group>
+            <name>scoped-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40scope/scoped-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <name>empty-package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/empty-package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <group>external-bom</group>
+            <name>package</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+        <component type=\\"library\\">
+            <group>external-bom</group>
+            <name>package2</name>
+            <version>1.0.0</version>
+            <description>
+                <![CDATA[]]>
+            </description>
+            <licenses>
+                <license>
+                    <id>ISC</id>
+                </license>
+            </licenses>
+            <purl>pkg:npm/%40external-bom/package2@1.0.0</purl>
+            <modified>false</modified>
+        </component>
+    </components>
+</bom>
+"
+`;
+
+exports[`cyclonedx-bom help, -h -h prints help 1`] = `
+"Usage:  cyclonedx-bom [OPTIONS] [path]
+Options:
+  -h        - this help
+  -a <path> - merge in additional modules from other scanner
+  -o <path> - write to file instead of stdout
+  -d        - include devDependencies
+"
+`;
