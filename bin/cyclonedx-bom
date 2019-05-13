@@ -40,7 +40,7 @@ let d = arguments.indexOf("-d");
 let options = {};
 if (d > -1) {
   options.dev = true;
-  arguments = arguments.slice(0,d).concat(arguments.slice(d+2));
+  arguments = arguments.slice(0,d).concat(arguments.slice(d+1));
 }
 
 
