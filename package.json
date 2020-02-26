@@ -51,7 +51,7 @@
     "prettify-xml": "^1.2.0",
     "read-installed": "^4.0.3",
     "ssri": "^6.0.0",
-    "uuid": "^3.3.2",
+    "uuid": "^7.0.1",
     "xmlbuilder": "^13.0.2",
     "xmldom": "^0.2.1"
   },
