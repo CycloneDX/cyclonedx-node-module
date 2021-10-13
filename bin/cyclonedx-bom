@@ -36,6 +36,7 @@ cdx
   .version(program.version, '-v, --version')
   .argument('[path]', 'Path to analyze')
   .option('-d, --include-dev', "Include devDependencies", false)
+  .option('-e, --include-extraneous', "Include extraneous dependencies", false)
   .option('-l, --include-license-text', "Include full license text", false)
   .option('-o, --output <output>', "Write BOM to file", "bom.xml")
   .option('-t, --type <type>', "Project type", "library")
@@ -49,6 +50,7 @@ const options = cdx.opts();
 
 let includeSerialNumber = options.serialNumber;
 let includeLicenseText = options.includeLicenseText;
+let includeExtraneous = options.includeExtraneous;
 let output = options.output;
 let componentType = options.type;
 
@@ -62,7 +64,7 @@ let readInstalledOptions = { dev: options.includeDev };
 /**
  * Creates a Bom object and writes either XML or JSON.
  */
-bomHelpers.createbom(componentType, includeSerialNumber, includeLicenseText, filePath, readInstalledOptions, (err, bom) => {
+bomHelpers.createbom(componentType, includeSerialNumber, includeLicenseText, includeExtraneous, filePath, readInstalledOptions, (err, bom) => {
     if (bom.components.length === 0) {
         console.log("There are no components in the BOM. The project may not contain dependencies or node_modules does not exist. Executing `npm install` prior to CycloneDX may solve the issue.")
     }

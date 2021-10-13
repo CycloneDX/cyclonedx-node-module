@@ -35,6 +35,7 @@ Creates CycloneDX Software Bill-of-Materials (SBOM) from Node.js projects
 Options:
   -v, --version              output the version number
   -d, --include-dev          Include devDependencies (default: false)
+  -e, --include-extraneous   Include extraneous dependencies (default: false)
   -l, --include-license-text Include full license text (default: false)
   -o, --output <output>      Write BOM to file (default: "bom.xml")
   -t, --type <type>          Project type (default: "library")
