@@ -37,7 +37,8 @@
     "cyclonedx-bom": "./bin/cyclonedx-bom"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "standard --fix"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -67,6 +68,12 @@
     "spdx-licenses.json"
   ],
   "devDependencies": {
-    "jest": "^27.1.0"
+    "jest": "^27.1.0",
+    "standard": "^16.0.4"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
