@@ -7,7 +7,7 @@
 #   -w /src \
 #   cyclonedx/cyclonedx-node:test -o /src/bom.xml /src
 
-FROM node:16.13-alpine3.12
+FROM node:17.2.0-alpine3.12
 
 WORKDIR /usr/src/cyclonedx-bom
 
