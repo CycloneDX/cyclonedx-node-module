@@ -17,7 +17,7 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const spdxLicenses = require('../spdx-licenses.json')
+const spdxLicenses = require('../res/spdx-licenses.json')
 const fs = require('fs')
 const License = require('./License')
 const AttachmentText = require('./AttachmentText')

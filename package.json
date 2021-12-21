@@ -69,7 +69,7 @@
     "index.js",
     "bin/",
     "model/",
-    "spdx-licenses.json"
+    "res/"
   ],
   "devDependencies": {
     "jest": "^27.1.0",
