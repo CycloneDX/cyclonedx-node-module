@@ -19,7 +19,7 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const OrganizationalContact = require('../../src/model/OrganizationalContact')
+const OrganizationalContact = require('../../src/models/OrganizationalContact')
 
 test('Model: OrganizationalContact / Format: XML', () => {
   const contact = new OrganizationalContact('John Doe', 'john.doe@examp.com', '555-1212')

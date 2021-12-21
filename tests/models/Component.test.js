@@ -19,14 +19,14 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const Component = require('../../src/model/Component')
-const Hash = require('../../src/model/Hash')
-const HashList = require('../../src/model/HashList')
-const License = require('../../src/model/License')
-const LicenseChoice = require('../../src/model/LicenseChoice')
-const OrganizationalContact = require('../../src/model/OrganizationalContact')
-const OrganizationalEntity = require('../../src/model/OrganizationalEntity')
-const Swid = require('../../src/model/Swid')
+const Component = require('../../src/models/Component')
+const Hash = require('../../src/models/Hash')
+const HashList = require('../../src/models/HashList')
+const License = require('../../src/models/License')
+const LicenseChoice = require('../../src/models/LicenseChoice')
+const OrganizationalContact = require('../../src/models/OrganizationalContact')
+const OrganizationalEntity = require('../../src/models/OrganizationalEntity')
+const Swid = require('../../src/models/Swid')
 
 test('Model: Component / Format: XML', () => {
   const result = createComponent().toXML()
