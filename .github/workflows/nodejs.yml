@@ -48,10 +48,10 @@ jobs:
         run: npm ci
       - name: install testing-project "with-packages"
         run: npm ci
-        working-directory: tests/with-packages
+        working-directory: tests/_data/packages/with-packages
       - name: install testing-project "with-dev-dependencies"
         run: npm ci
-        working-directory: tests/with-dev-dependencies
+        working-directory: tests/_data/packages/with-dev-dependencies
       - name: run tests
         run: >
           npm run test:unit --

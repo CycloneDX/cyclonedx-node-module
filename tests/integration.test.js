@@ -19,13 +19,17 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
+const path = require('path')
+
 const bomHelpers = require('../src')
 
 const timestamp = new Date('2020-01-01T01:00:00.000Z')
 const programVersion = '3.0.0'
 
+const integrationSetupsDir = path.join(path.dirname(__filename), '_data', 'packages')
+
 test('createbom produces an empty BOM', done => {
-  bomHelpers.createbom('library', false, false, './tests/no-packages', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, false, path.join(integrationSetupsDir, 'no-packages'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -36,7 +40,7 @@ test('createbom produces an empty BOM', done => {
 })
 
 test('createbom produces a BOM without development dependencies', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-packages', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-packages'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -47,7 +51,7 @@ test('createbom produces a BOM without development dependencies', done => {
 })
 
 test('createbom produces a BOM with development dependencies', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-packages', { dev: true }, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-packages'), { dev: true }, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -58,7 +62,7 @@ test('createbom produces a BOM with development dependencies', done => {
 })
 
 test('createbom produces a BOM in JSON format', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-packages', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-packages'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -69,7 +73,7 @@ test('createbom produces a BOM in JSON format', done => {
 })
 
 test('createbom produces a BOM in JSON format that includes hashes from package-lock.json', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-lockfile-2', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-lockfile-2'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -80,7 +84,7 @@ test('createbom produces a BOM in JSON format that includes hashes from package-
 })
 
 test('createbom produces a BOM when no package-lock.json is present', done => {
-  bomHelpers.createbom('library', false, true, './tests/no-lockfile', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'no-lockfile'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -91,7 +95,7 @@ test('createbom produces a BOM when no package-lock.json is present', done => {
 })
 
 test('createbom produces a BOM when all dependencies are dev-dependencies that shall not be listed', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-dev-dependencies', {}, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-dev-dependencies'), {}, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
@@ -102,7 +106,7 @@ test('createbom produces a BOM when all dependencies are dev-dependencies that s
 })
 
 test('createbom produces a BOM when all dependencies are dev-dependencies that shall be listed', done => {
-  bomHelpers.createbom('library', false, true, './tests/with-dev-dependencies', { dev: true }, (err, bom) => {
+  bomHelpers.createbom('library', false, true, path.join(integrationSetupsDir, 'with-dev-dependencies'), { dev: true }, (err, bom) => {
     expect(err).toBeFalsy()
 
     bom.metadata.timestamp = timestamp
