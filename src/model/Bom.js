@@ -23,7 +23,7 @@ const Component = require('./Component')
 const CycloneDXObject = require('./CycloneDXObject')
 const Metadata = require('./Metadata')
 const Tool = require('./Tool')
-const program = require('../package.json')
+const program = require('../../package.json')
 
 class Bom extends CycloneDXObject {
   constructor (pkg, componentType, includeSerialNumber = true, includeLicenseText = true, lockfile) {

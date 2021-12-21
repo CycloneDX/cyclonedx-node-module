@@ -19,7 +19,7 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const bomHelpers = require('../index.js')
+const bomHelpers = require('../src')
 
 const timestamp = new Date('2020-01-01T01:00:00.000Z')
 const programVersion = '3.0.0'

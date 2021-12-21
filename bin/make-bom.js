@@ -27,9 +27,9 @@ const commander = require('commander')
 const DomParser = require('@xmldom/xmldom').DOMParser
 const xmlFormat = require('prettify-xml')
 
-const bomHelpers = require('../index.js')
+const bomHelpers = require('../src')
 const program = require('../package.json')
-const Component = require('../model/Component')
+const Component = require('../src/model/Component')
 
 const EXIT_SUCCESS = 0
 const EXIT_INVALID = 1

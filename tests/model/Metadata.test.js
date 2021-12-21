@@ -19,12 +19,12 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const Bom = require('../../model/Bom')
-const Component = require('../../model/Component')
-const Metadata = require('../../model/Metadata')
-const OrganizationalContact = require('../../model/OrganizationalContact')
-const OrganizationalEntity = require('../../model/OrganizationalEntity')
-const Tool = require('../../model/Tool')
+const Bom = require('../../src/model/Bom')
+const Component = require('../../src/model/Component')
+const Metadata = require('../../src/model/Metadata')
+const OrganizationalContact = require('../../src/model/OrganizationalContact')
+const OrganizationalEntity = require('../../src/model/OrganizationalEntity')
+const Tool = require('../../src/model/Tool')
 
 test('Model: Metadata / Format: XML', () => {
   const result = createMetadata().toXML()

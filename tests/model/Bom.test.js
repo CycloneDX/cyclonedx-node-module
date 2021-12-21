@@ -19,7 +19,7 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const Bom = require('../../model/Bom')
+const Bom = require('../../src/model/Bom')
 
 test('default schema version', () => {
   const bom = new Bom()
