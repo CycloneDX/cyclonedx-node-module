@@ -68,7 +68,8 @@
   "files": [
     "src/",
     "bin/",
-    "res/"
+    "res/",
+    "NOTICE"
   ],
   "devDependencies": {
     "jest": "^27.1.0",
