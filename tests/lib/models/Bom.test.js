@@ -19,20 +19,25 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
-const OrganizationalContact = require('../../src/models/OrganizationalContact')
+const Bom = require('../../../lib/models/Bom')
 
-test('Model: OrganizationalContact / Format: XML', () => {
-  const contact = new OrganizationalContact('John Doe', 'john.doe@examp.com', '555-1212')
-  const result = contact.toXML()
-  expect(result.name).toBe('John Doe')
-  expect(result.email).toBe('john.doe@examp.com')
-  expect(result.phone).toBe('555-1212')
+test('default schema version', () => {
+  const bom = new Bom()
+  expect(bom.schemaVersion).toBe('1.3')
 })
 
-test('Model: OrganizationalContact / Format: JSON', () => {
-  const contact = new OrganizationalContact('John Doe', 'john.doe@examp.com', '555-1212')
-  const result = contact.toJSON()
-  expect(result.name).toBe('John Doe')
-  expect(result.email).toBe('john.doe@examp.com')
-  expect(result.phone).toBe('555-1212')
+test('default bom version', () => {
+  const bom = new Bom()
+  expect(bom.version).toBe(1)
+})
+
+test('specific bom version', () => {
+  const bom = new Bom()
+  bom.version = 2
+  expect(bom.version).toBe(2)
+})
+
+test('generated serial number', () => {
+  const bom = new Bom()
+  expect(bom.serialNumber).toContain('urn:uuid:')
 })

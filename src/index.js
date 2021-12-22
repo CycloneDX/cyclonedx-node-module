@@ -21,7 +21,7 @@ const fs = require('fs')
 const filePath = require('path')
 const readInstalled = require('read-installed')
 
-const Bom = require('./models/Bom')
+const Bom = require('../lib/models/Bom')
 
 exports.createbom = (componentType, includeSerialNumber, includeLicenseText, path, options, callback) => readInstalled(path, options, (err, pkgInfo) => {
   if (err) { callback(err, null); return }

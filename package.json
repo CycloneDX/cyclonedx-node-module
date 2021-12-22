@@ -32,7 +32,7 @@
       "name": "Patrick Dwyer"
     }
   ],
-  "main": "src/index.js",
+  "main": "./src/index.js",
   "bin": {
     "cyclonedx-bom": "./bin/make-bom.js",
     "cyclonedx-node": "./bin/make-bom.js"
@@ -66,8 +66,9 @@
     "xmlbuilder": "^15.1.1"
   },
   "files": [
-    "src/",
     "bin/",
+    "src/",
+    "lib",
     "res/",
     "NOTICE"
   ],
