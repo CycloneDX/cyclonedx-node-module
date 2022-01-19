@@ -16,6 +16,8 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
+const parsePackageJsonName = require('parse-packagejson-name');
+const { PackageURL } = require('packageurl-js');
 const builder = require('xmlbuilder');
 const uuid = require('uuid');
 const Component = require('./Component');
@@ -23,6 +25,7 @@ const CycloneDXObject = require('./CycloneDXObject');
 const Metadata = require('./Metadata');
 const Tool = require('./Tool');
 const program = require('../package.json');
+const Dependency = require('./Dependency');
 
 class Bom extends CycloneDXObject {
 
@@ -38,10 +41,46 @@ class Bom extends CycloneDXObject {
     if (pkg) {
       this._metadata = this.createMetadata(pkg, componentType);
       this._components = this.listComponents(pkg, lockfile);
+      this._dependencies = this.listDependencies(pkg)
     } else {
       this._components = [];
+      this._dependencies = [];
     }
 
+  }
+
+  listDependencies(pkg) {
+    let list = []
+    this.createDependency(pkg, list);
+    return list
+  }
+
+  createDependency(pkg, list) {
+    if(pkg.extraneous) return;
+    let rootBomRef = this.createBomRef(pkg)
+    let transitiveDependencieslist = [];
+    if (Object.keys(pkg._dependencies).length) {
+      for (var dependency in pkg._dependencies) {
+        if (pkg.dependencies[dependency] !== undefined) {
+          let bomRef = this.createBomRef(pkg.dependencies[dependency]);
+          transitiveDependencieslist.push(new Dependency(bomRef, this.createDependency(pkg.dependencies[dependency], list)))
+        }
+     }
+     list.push(new Dependency(rootBomRef, transitiveDependencieslist))
+    }
+    return transitiveDependencieslist;
+  }
+
+  createBomRef(pkg) {
+    let bomRef = null
+    let pkgIdentifier = parsePackageJsonName(pkg.name);
+    let group = (pkgIdentifier.scope) ? pkgIdentifier.scope : undefined;
+    if (group) group = '@' + group;
+    let name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined;
+    let version = (pkg.version) ? pkg.version : undefined;
+    if (name && version)
+        bomRef = new PackageURL('npm', group, name, version, null, null).toString();
+    return bomRef
   }
 
   createMetadata(pkg, componentType) {
