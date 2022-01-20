@@ -65,7 +65,7 @@ class Bom extends CycloneDXObject {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
         .filter(x => x !== undefined) //remove cycles
-        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependencyNew(x, list))));
+        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependency(x, list))));
      list.push(new Dependency(rootBomRef, deplist))
     }
     return deplist;
