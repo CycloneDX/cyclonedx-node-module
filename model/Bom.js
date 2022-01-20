@@ -47,38 +47,37 @@ class Bom extends CycloneDXObject {
       this._dependencies = []
     }
   }
-  
+
   listDependencies (pkg) {
-    let list = []
+    const list = []
     this.createDependency(pkg, list)
     return list
   }
 
   createDependency (pkg, list) {
-    //read-installed with default options marks devDependencies as extraneous
-    //if a package is marked as extraneous, do not include it as a dependency
-    if(pkg.extraneous) return
-    let rootBomRef = this.createBomRef(pkg)
-    let deplist = []
+    // read-installed with default options marks devDependencies as extraneous
+    // if a package is marked as extraneous, do not include it as a dependency
+    if (pkg.extraneous) return
+    const rootBomRef = this.createBomRef(pkg)
+    const deplist = []
     if (Object.keys(pkg._dependencies).length) {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
-        .filter(x => x !== undefined) //remove cycles
+        .filter(x => x !== undefined) // remove cycles
         .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependency(x, list))))
-     list.push(new Dependency(rootBomRef, deplist))
+      list.push(new Dependency(rootBomRef, deplist))
     }
     return deplist
   }
 
   createBomRef (pkg) {
     let bomRef = null
-    let pkgIdentifier = parsePackageJsonName(pkg.name)
+    const pkgIdentifier = parsePackageJsonName(pkg.name)
     let group = (pkgIdentifier.scope) ? pkgIdentifier.scope : undefined
     if (group) group = '@' + group
-    let name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined
-    let version = (pkg.version) ? pkg.version : undefined
-    if (name && version)
-        bomRef = new PackageURL('npm', group, name, version, null, null).toString()
+    const name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined
+    const version = (pkg.version) ? pkg.version : undefined
+    if (name && version) { bomRef = new PackageURL('npm', group, name, version, null, null).toString() }
     return bomRef
   }
 
