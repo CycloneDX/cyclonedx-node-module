@@ -81,13 +81,13 @@ class Bom extends CycloneDXObject {
     return bomRef
   }
 
-  createMetadata(pkg, componentType) {
-    let metadata = new Metadata();
-    metadata.component = new Component(pkg, this.includeLicenseText);
+  createMetadata (pkg, componentType) {
+    const metadata = new Metadata()
+    metadata.component = new Component(pkg, this.includeLicenseText)
     metadata.component.type = componentType;
-    let tool = new Tool("CycloneDX", "Node.js module", program.version);
-    metadata.tools.push(tool);
-    return metadata;
+    const tool = new Tool('CycloneDX', 'Node.js module', program.version);
+    metadata.tools.push(tool)
+    return metadata
   }
 
   /**
