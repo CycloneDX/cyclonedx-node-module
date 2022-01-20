@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
+## INTENDED TO BE RUN FROM PROJECT ROOT DIR
+set -ex
+
+## install project
 npm ci
-cd tests/with-packages
-npm ci
-cd ..
+
+## install testing-projects
+npm ci --prefix 'tests/with-packages'
+npm ci --prefix 'tests/with-dev-dependencies'
+
+## run tests
 npm test
+
+## try to build project
+npm run build --if-present

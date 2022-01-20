@@ -1,6 +1,6 @@
 {
   "name": "@cyclonedx/bom",
-  "version": "3.1.1",
+  "version": "3.3.1",
   "description": "Creates CycloneDX Software Bill of Materials (SBOM) from Node.js projects",
   "homepage": "http://github.com/CycloneDX/cyclonedx-node-module",
   "author": "Erlend Oftedal",
@@ -34,10 +34,15 @@
   ],
   "main": "index.js",
   "bin": {
-    "cyclonedx-bom": "./bin/cyclonedx-bom"
+    "cyclonedx-bom": "./bin/make-bom.js",
+    "cyclonedx-node": "./bin/make-bom.js"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npm run test:standard && npm run test:unit",
+    "test:unit": "jest",
+    "test:standard": "standard -v",
+    "cs-fix": "standard --fix",
+    "docker-release": "docker build . -t cyclonedx/cyclonedx-node:`node bin/make-bom.js --version` -t cyclonedx/cyclonedx-node:latest && docker push cyclonedx/cyclonedx-node:`node bin/make-bom.js --version` && docker push cyclonedx/cyclonedx-node:latest"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -67,6 +72,22 @@
     "spdx-licenses.json"
   ],
   "devDependencies": {
-    "jest": "^27.1.0"
+    "jest": "^27.1.0",
+    "jest-junit": "^13.0.0",
+    "standard": "^16.0.4"
+  },
+  "jest": {
+    "cacheDirectory": ".jest.cache",
+    "collectCoverage": true,
+    "coverageDirectory": "reports/jest/coverage",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": "reports/jest",
+    "outputName": "tests.junit.xml"
   }
 }
