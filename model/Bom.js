@@ -16,6 +16,7 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
+
 const builder = require('xmlbuilder')
 const uuid = require('uuid')
 const Component = require('./Component')
