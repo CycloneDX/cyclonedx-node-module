@@ -56,19 +56,19 @@ class Bom extends CycloneDXObject {
   }
 
   createDependency(pkg, list) {
+    //read-installed with default options marks devDependencies as extraneous
+    //if a package is marked as extraneous, do not include it as a dependency
     if(pkg.extraneous) return;
     let rootBomRef = this.createBomRef(pkg)
-    let transitiveDependencieslist = [];
+    let deplist = [];
     if (Object.keys(pkg._dependencies).length) {
-      for (var dependency in pkg._dependencies) {
-        if (pkg.dependencies[dependency] !== undefined) {
-          let bomRef = this.createBomRef(pkg.dependencies[dependency]);
-          transitiveDependencieslist.push(new Dependency(bomRef, this.createDependency(pkg.dependencies[dependency], list)))
-        }
-     }
-     list.push(new Dependency(rootBomRef, transitiveDependencieslist))
+      Object.keys(pkg._dependencies)
+        .map(x => pkg.dependencies[x])
+        .filter(x => x !== undefined) //remove cycles
+        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependencyNew(x, list))));
+     list.push(new Dependency(rootBomRef, deplist))
     }
-    return transitiveDependencieslist;
+    return deplist;
   }
 
   createBomRef(pkg) {
