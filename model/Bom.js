@@ -16,16 +16,16 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
-const parsePackageJsonName = require('parse-packagejson-name');
-const { PackageURL } = require('packageurl-js');
-const builder = require('xmlbuilder');
-const uuid = require('uuid');
-const Component = require('./Component');
-const CycloneDXObject = require('./CycloneDXObject');
-const Metadata = require('./Metadata');
-const Tool = require('./Tool');
-const program = require('../package.json');
-const Dependency = require('./Dependency');
+const builder = require('xmlbuilder')
+const uuid = require('uuid')
+const Component = require('./Component')
+const CycloneDXObject = require('./CycloneDXObject')
+const Metadata = require('./Metadata')
+const Tool = require('./Tool')
+const program = require('../package.json')
+const Dependency = require('./Dependency')
+const parsePackageJsonName = require('parse-packagejson-name')
+const { PackageURL } = require('packageurl-js')
 
 class Bom extends CycloneDXObject {
   constructor (pkg, componentType, includeSerialNumber = true, includeLicenseText = true, lockfile) {
@@ -38,54 +38,54 @@ class Bom extends CycloneDXObject {
       this._serialNumber = 'urn:uuid:' + uuid.v4()
     }
     if (pkg) {
-      this._metadata = this.createMetadata(pkg, componentType);
-      this._components = this.listComponents(pkg, lockfile);
+      this._metadata = this.createMetadata(pkg, componentType)
+      this._components = this.listComponents(pkg, lockfile)
       this._dependencies = this.listDependencies(pkg)
     } else {
-      this._components = [];
-      this._dependencies = [];
+      this._components = []
+      this._dependencies = []
     }
   }
   
-  listDependencies(pkg) {
+  listDependencies (pkg) {
     let list = []
-    this.createDependency(pkg, list);
+    this.createDependency(pkg, list)
     return list
   }
 
-  createDependency(pkg, list) {
+  createDependency (pkg, list) {
     //read-installed with default options marks devDependencies as extraneous
     //if a package is marked as extraneous, do not include it as a dependency
-    if(pkg.extraneous) return;
+    if(pkg.extraneous) return
     let rootBomRef = this.createBomRef(pkg)
-    let deplist = [];
+    let deplist = []
     if (Object.keys(pkg._dependencies).length) {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
         .filter(x => x !== undefined) //remove cycles
-        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependency(x, list))));
+        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependency(x, list))))
      list.push(new Dependency(rootBomRef, deplist))
     }
-    return deplist;
+    return deplist
   }
 
-  createBomRef(pkg) {
+  createBomRef (pkg) {
     let bomRef = null
-    let pkgIdentifier = parsePackageJsonName(pkg.name);
-    let group = (pkgIdentifier.scope) ? pkgIdentifier.scope : undefined;
-    if (group) group = '@' + group;
-    let name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined;
-    let version = (pkg.version) ? pkg.version : undefined;
+    let pkgIdentifier = parsePackageJsonName(pkg.name)
+    let group = (pkgIdentifier.scope) ? pkgIdentifier.scope : undefined
+    if (group) group = '@' + group
+    let name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined
+    let version = (pkg.version) ? pkg.version : undefined
     if (name && version)
-        bomRef = new PackageURL('npm', group, name, version, null, null).toString();
+        bomRef = new PackageURL('npm', group, name, version, null, null).toString()
     return bomRef
   }
 
   createMetadata (pkg, componentType) {
     const metadata = new Metadata()
     metadata.component = new Component(pkg, this.includeLicenseText)
-    metadata.component.type = componentType;
-    const tool = new Tool('CycloneDX', 'Node.js module', program.version);
+    metadata.component.type = componentType
+    const tool = new Tool('CycloneDX', 'Node.js module', program.version)
     metadata.tools.push(tool)
     return metadata
   }
