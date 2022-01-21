@@ -60,7 +60,7 @@ class Bom extends CycloneDXObject {
     if (pkg.extraneous) return
     const rootBomRef = this.createBomRef(pkg)
     const deplist = []
-    if (Object.keys(pkg._dependencies).length) {
+    if (pkg._dependencies && Object.keys(pkg._dependencies).length === 0) {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
         .filter(x => x !== undefined) // remove cycles
