@@ -58,27 +58,27 @@ class Bom extends CycloneDXObject {
     // read-installed with default options marks devDependencies as extraneous
     // if a package is marked as extraneous, do not include it as a dependency
     if (pkg.extraneous) return
-    const rootBomRef = this.createBomRef(pkg)
+    const ref = this.createPackageURL(pkg)
     const deplist = []
     if (pkg._dependencies && Object.keys(pkg._dependencies).length !== 0) {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
         .filter(x => x !== undefined) // remove cycles
-        .map(x => deplist.push(new Dependency(this.createBomRef(x), this.createDependency(x, list))))
-      list.push(new Dependency(rootBomRef, deplist))
+        .map(x => deplist.push(new Dependency(this.createPackageURL(x), this.createDependency(x, list))))
+      list.push(new Dependency(ref, deplist))
     }
     return deplist
   }
 
-  createBomRef (pkg) {
-    let bomRef = null
+  createPackageURL (pkg) {
+    let purl = null
     const pkgIdentifier = parsePackageJsonName(pkg.name)
     let group = (pkgIdentifier.scope) ? pkgIdentifier.scope : undefined
     if (group) group = '@' + group
     const name = (pkgIdentifier.fullName) ? pkgIdentifier.fullName : undefined
     const version = (pkg.version) ? pkg.version : undefined
-    if (name && version) { bomRef = new PackageURL('npm', group, name, version, null, null).toString() }
-    return bomRef
+    if (name && version) { purl = new PackageURL('npm', group, name, version, null, null).toString() }
+    return purl
   }
 
   createMetadata (pkg, componentType) {
