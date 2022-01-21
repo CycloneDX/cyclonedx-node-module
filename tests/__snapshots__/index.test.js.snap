@@ -1930,17 +1930,7 @@ exports[`createbom produces a BOM in JSON format that includes hashes from packa
   \\"components\\": [],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-test-with-lockfile-2@1.1.3\\",
-      \\"dependsOn\\": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
+      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-test-with-lockfile-2@1.1.3\\"
     }
   ]
 }"
@@ -2140,17 +2130,7 @@ exports[`createbom produces a BOM when no package-lock.json is present 1`] = `
   \\"components\\": [],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-test-no-lockfile@1.1.3\\",
-      \\"dependsOn\\": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ]
+      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-test-no-lockfile@1.1.3\\"
     }
   ]
 }"

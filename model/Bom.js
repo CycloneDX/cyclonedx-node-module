@@ -57,13 +57,14 @@ class Bom extends CycloneDXObject {
   createDependency (pkg, list) {
     // read-installed with default options marks devDependencies as extraneous
     // if a package is marked as extraneous, do not include it as a dependency
+    // if -d or --include-dev is specified then all dev dependencies are considered
     if (pkg.extraneous) return
     const ref = this.createPackageURL(pkg)
     const deplist = []
     if (pkg._dependencies && Object.keys(pkg._dependencies).length !== 0) {
       Object.keys(pkg._dependencies)
         .map(x => pkg.dependencies[x])
-        .filter(x => x !== undefined) // remove cycles
+        .filter(x => x !== undefined && typeof (x) !== 'string') // remove cycles
         .map(x => deplist.push(new Dependency(this.createPackageURL(x), this.createDependency(x, list))))
       list.push(new Dependency(ref, deplist))
     }
