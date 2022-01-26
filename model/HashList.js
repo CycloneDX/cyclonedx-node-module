@@ -28,6 +28,15 @@ class HashList {
     }
   }
 
+  /**
+   * @returns {number}
+   */
+  get length () {
+    return this._hashes
+      ? this._hashes.length
+      : 0
+  }
+
   get hashes () {
     return this._hashes
   }

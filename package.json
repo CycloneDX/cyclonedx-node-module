@@ -76,6 +76,8 @@
     "jest-junit": "^13.0.0",
     "standard": "^16.0.4"
   },
+  "standard": {
+  },
   "jest": {
     "cacheDirectory": ".jest.cache",
     "collectCoverage": true,

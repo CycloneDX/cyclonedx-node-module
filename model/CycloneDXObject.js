@@ -18,6 +18,15 @@
  */
 
 class CycloneDXObject {
+  /**
+   * @template ExpectedType
+   * @param {string} name
+   * @param {ExpectedType|*} value
+   * @param {ExpectedType} expectedType
+   * @param {boolean} [required]
+   * @throws {TypeError} if value is not optional and mismatches expectedType
+   * @returns {ExpectedType|undefined}
+   */
   validateType (name, value, expectedType, required = false) {
     if (!value) {
       if (required) { throw new ReferenceError(name + ' is required') }
@@ -51,6 +60,14 @@ class CycloneDXObject {
     throw TypeError(name + ' value must be an instance of ' + expectedType)
   }
 
+  /**
+   * @template Choice
+   * @param {string} name
+   * @param {Choice|*} value
+   * @param {Choice[]} validChoices
+   * @throws {RangeError} if value is not in validChoices
+   * @returns {Choice}
+   */
   validateChoice (name, value, validChoices = []) {
     if (validChoices.indexOf(value) === -1) {
       throw new RangeError('Unsupported ' + name + '. Valid choices are ' + validChoices.toString())
