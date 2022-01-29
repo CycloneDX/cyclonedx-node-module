@@ -38,7 +38,7 @@
     "cyclonedx-node": "./bin/make-bom.js"
   },
   "scripts": {
-    "test": "npm run test:standard && npm run test:unit",
+    "test": "npm run test:unit && npm run test:standard",
     "test:unit": "jest",
     "test:standard": "standard -v",
     "cs-fix": "standard --fix",
@@ -72,12 +72,23 @@
     "spdx-licenses.json"
   ],
   "devDependencies": {
+    "@babel/eslint-parser": "^7.16.5",
     "jest": "^27.1.0",
     "jest-junit": "^13.0.0",
     "standard": "^16.0.4"
   },
   "standard": {
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "babelOptions": {}
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    }
   },
+  "babel": {},
   "jest": {
     "cacheDirectory": ".jest.cache",
     "collectCoverage": true,
