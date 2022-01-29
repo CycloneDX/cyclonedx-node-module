@@ -29,7 +29,7 @@ class HashList {
   }
 
   /**
-   * @returns {number}
+   * @type {number}
    */
   get length () {
     return this._hashes

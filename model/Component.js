@@ -27,13 +27,19 @@ const OrganizationalEntity = require('./OrganizationalEntity')
 const Swid = require('./Swid')
 
 /**
- * @typedef {"application"|"framework"|"library"|"container"|"operating-system"|"device"|"firmware"|"file"} ComponentType
- * @typedef {"required"|"optional"|"excluded"} ComponentScope
+ * Component's scope
+ * @typedef {("required"|"optional"|"excluded")} Component.ComponentScope
  */
+
+/**
+ * Component's type
+ * @typedef {("application"|"framework"|"library"|"container"|"operating-system"|"device"|"firmware"|"file")} Component.ComponentType
+ */
+
 class Component extends CycloneDXObject {
   // region required properties
 
-  /** @type {ComponentType} */
+  /** @type {Component.ComponentType} */
   #type = 'library'
   /** @type {string} */
   #name = ''
@@ -42,43 +48,43 @@ class Component extends CycloneDXObject {
 
   // region optional properties
 
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #author
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #bomRef
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #copyright
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #cpe
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #description
-  /** @type {ExternalReferenceList|undefined} */
+  /** @type {(ExternalReferenceList|undefined)} */
   #externalReferences
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #group
-  /** @type {HashList|undefined} */
+  /** @type {(HashList|undefined)} */
   #hashes
-  /** @type {LicenseChoice|undefined} */
+  /** @type {(LicenseChoice|undefined)} */
   #licenses
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #publisher
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #purl
-  /** @type {ComponentScope|undefined} */
+  /** @type {(Component.ComponentScope|undefined)} */
   #scope
-  /** @type {OrganizationalEntity|undefined} */
+  /** @type {(OrganizationalEntity|undefined)} */
   #supplier
-  /** @type {Swid|undefined} */
+  /** @type {(Swid|undefined)} */
   #swid
-  /** @type {string|undefined} */
+  /** @type {(string|undefined)} */
   #version
 
   // endregion optional properties
 
   /**
-   * @param {object|undefined} [pkg]
+   * @param {(Object|undefined)} [pkg]
    * @param {boolean} [includeLicenseText]
-   * @param {object|undefined} [lockfile]
+   * @param {(Object|undefined)} [lockfile]
    */
   constructor (pkg, includeLicenseText = true, lockfile) {
     super()
@@ -132,7 +138,7 @@ class Component extends CycloneDXObject {
    * If the author has described the module as a 'framework', the take their
    * word for it, otherwise, identify the module as a 'library'.
    *
-   * @returns {"framework"|"library"}
+   * @returns {("framework"|"library")}
    */
   determinePackageType (pkg) {
     if (pkg && Object.prototype.hasOwnProperty.call(pkg, 'keywords')) {
@@ -146,78 +152,82 @@ class Component extends CycloneDXObject {
   }
 
   /**
-   * @returns {(ComponentType)[]}
+   * @returns {Component.ComponentType[]}
    */
   static supportedComponentTypes () {
     return ['application', 'framework', 'library', 'container', 'operating-system', 'device', 'firmware', 'file']
   }
 
   /**
-   * @returns {(ComponentScope)[]}
+   * @returns {Component.ComponentScope[]}
    */
   static supportedComponentScopes () {
     return ['required', 'optional', 'excluded']
   }
 
   /**
-   * @returns {ComponentType}
+   * @type {Component.ComponentType}
    */
   get type () {
     return this.#type
   }
 
   /**
-   * @see Component.supportedComponentTypes()
-   * @param {ComponentType} value
+   * @see supportedComponentTypes
+   * @param {Component.ComponentType} value
+   * @throws {TypeError} if value is not in expected range
    */
   set type (value) {
     this.#type = this.validateChoice('Type', value, Component.supportedComponentTypes())
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get bomRef () {
     return this.#bomRef
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set bomRef (value) {
     this.#bomRef = this.validateType('bom-ref', value, String)
   }
 
   /**
-   * @returns {OrganizationalEntity|undefined}
+   * @type {(OrganizationalEntity|undefined)}
    */
   get supplier () {
     return this.#supplier
   }
 
   /**
-   * @param {OrganizationalEntity|undefined} value
+   * @param {(OrganizationalEntity|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set supplier (value) {
     this.#supplier = this.validateType('Supplier', value, OrganizationalEntity)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get author () {
     return this.#author
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set author (value) {
     this.#author = this.validateType('Author', value, String)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get publisher () {
     return this.#publisher
@@ -225,28 +235,30 @@ class Component extends CycloneDXObject {
 
   /**
    *
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set publisher (value) {
     this.#publisher = this.validateType('Publisher', value, String)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get group () {
     return this.#group
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set group (value) {
     this.#group = this.validateType('Group', value, String)
   }
 
   /**
-   * @returns {string}
+   * @type {string}
    */
   get name () {
     return this.#name
@@ -254,51 +266,53 @@ class Component extends CycloneDXObject {
 
   /**
    * @param {string} value
+   * @throws {TypeError} if value is not of expected type
    */
   set name (value) {
     this.#name = this.validateType('Name', value, String, true)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get version () {
     return this.#version
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set version (value) {
     this.#version = this.validateType('Version', value, String)
   }
 
   /**
-   *
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get description () {
     return this.#description
   }
 
   /**
-   *
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set description (value) {
     this.#description = this.validateType('Description', value, String)
   }
 
   /**
-   * @returns {ComponentScope|undefined}
+   * @type {(Component.ComponentScope|undefined)}
    */
   get scope () {
     return this.#scope
   }
 
   /**
-   * @see Component.supportedComponentScopes()
-   * @param {ComponentScope|undefined} value
+   * @see supportedComponentScopes
+   * @param {(Component.ComponentScope|undefined)} value
+   * @throws {RangeError} if value is not of expected range
    */
   set scope (value) {
     this.#scope = value
@@ -307,98 +321,105 @@ class Component extends CycloneDXObject {
   }
 
   /**
-   * @returns {HashList|undefined}
+   * @type {(HashList|undefined)}
    */
   get hashes () {
     return this.#hashes
   }
 
   /**
-   * @param {HashList|undefined} value
+   * @param {(HashList|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set hashes (value) {
     this.#hashes = this.validateType('Hashes', value, HashList)
   }
 
   /**
-   * @returns {LicenseChoice|undefined}
+   * @type {(LicenseChoice|undefined)}
    */
   get licenses () {
     return this.#licenses
   }
 
   /**
-   * @param {LicenseChoice|undefined} value
+   * @param {(LicenseChoice|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set licenses (value) {
     this.#licenses = this.validateType('Licenses', value, LicenseChoice)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get copyright () {
     return this.#copyright
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set copyright (value) {
     this.#copyright = this.validateType('Copyright', value, String)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get cpe () {
     return this.#cpe
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set cpe (value) {
     this.#cpe = this.validateType('CPE', value, String)
   }
 
   /**
-   * @returns {string|undefined}
+   * @type {(string|undefined)}
    */
   get purl () {
     return this.#purl
   }
 
   /**
-   * @param {string|undefined} value
+   * @param {(string|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set purl (value) {
     this.#purl = this.validateType('PURL', value, String)
   }
 
   /**
-   * @returns {Swid|undefined}
+   * @type {(Swid|undefined)}
    */
   get swid () {
     return this.#swid
   }
 
   /**
-   * @param {Swid|undefined} value
+   * @param {(Swid|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set swid (value) {
     this.#swid = this.validateType('SWID', value, Swid)
   }
 
   /**
-   * @returns {ExternalReferenceList|undefined}
+   * @type {(ExternalReferenceList|undefined)}
    */
   get externalReferences () {
     return this.#externalReferences
   }
 
   /**
-   * @param {ExternalReferenceList|undefined} value
+   * @param {(ExternalReferenceList|undefined)} value
+   * @throws {TypeError} if value is not of expected type
    */
   set externalReferences (value) {
     this.#externalReferences = this.validateType('ExternalReferenceList', value, ExternalReferenceList)
@@ -406,7 +427,7 @@ class Component extends CycloneDXObject {
 
   /**
    *
-   * @returns {object}
+   * @returns {Object}
    */
   toJSON () {
     return {
@@ -441,7 +462,7 @@ class Component extends CycloneDXObject {
   }
 
   /**
-   * @returns {object}
+   * @returns {Object}
    */
   toXML () {
     return {

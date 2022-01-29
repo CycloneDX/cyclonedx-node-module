@@ -17,15 +17,18 @@
  * Copyright (c) OWASP Foundation. All Rights Reserved.
  */
 
+/**
+ * Base class for all data models.
+ */
 class CycloneDXObject {
   /**
-   * @template ExpectedType
+   * @template TExpectedType
    * @param {string} name
-   * @param {ExpectedType|*} value
-   * @param {ExpectedType} expectedType
+   * @param {(TExpectedType|*)} value
+   * @param {TExpectedType} expectedType
    * @param {boolean} [required]
    * @throws {TypeError} if value is not optional and mismatches expectedType
-   * @returns {ExpectedType|undefined}
+   * @returns {(TExpectedType|undefined)}
    */
   validateType (name, value, expectedType, required = false) {
     if (!value) {
@@ -61,12 +64,12 @@ class CycloneDXObject {
   }
 
   /**
-   * @template Choice
+   * @template TChoice
    * @param {string} name
-   * @param {Choice|*} value
-   * @param {Choice[]} validChoices
+   * @param {(TChoice|*)} value
+   * @param {TChoice[]} validChoices
    * @throws {RangeError} if value is not in validChoices
-   * @returns {Choice}
+   * @returns {TChoice}
    */
   validateChoice (name, value, validChoices = []) {
     if (validChoices.indexOf(value) === -1) {

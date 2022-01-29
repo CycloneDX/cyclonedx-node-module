@@ -28,7 +28,7 @@ class ExternalReferenceList {
   }
 
   /**
-   * @returns {number}
+   * @type {number}
    */
   get length () {
     return this._externalReferences
