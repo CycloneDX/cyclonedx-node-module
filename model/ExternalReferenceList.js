@@ -28,6 +28,7 @@ class ExternalReferenceList {
   }
 
   /**
+   * Number of ExternalReferences.
    * @type {number}
    */
   get length () {

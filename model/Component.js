@@ -90,6 +90,7 @@ class Component extends CycloneDXObject {
     super()
 
     if (pkg) {
+      // use the setters wherever type checks are needed, as the input data is untrusted and potentially malformed.
       const pkgIdentifier = parsePackageJsonName(pkg.name)
 
       this.name = pkgIdentifier.fullName
@@ -101,8 +102,8 @@ class Component extends CycloneDXObject {
       } catch (e) { /* pass */ }
 
       this.group = pkgIdentifier.scope
-      if (this.group) {
-        this.group = '@' + this.group
+      if (this.#group) {
+        this.#group = `@${this.#group}`
       }
 
       try {
@@ -110,15 +111,15 @@ class Component extends CycloneDXObject {
       } catch (e) { /* pass */ }
 
       try {
-        this.licenses = new LicenseChoice(pkg, includeLicenseText)
+        this.#licenses = new LicenseChoice(pkg, includeLicenseText)
       } catch (e) { /* pass */ }
 
-      this.hashes = new HashList(pkg, lockfile)
+      this.#hashes = new HashList(pkg, lockfile)
 
-      this.externalReferences = new ExternalReferenceList(pkg)
+      this.#externalReferences = new ExternalReferenceList(pkg)
 
-      if (this.name && this.version) {
-        this.purl = new PackageURL('npm', this.group, this.name, this.version, null, null).toString()
+      if (this.#name && this.#version) {
+        this.#purl = new PackageURL('npm', this.#group, this.#name, this.#version, null, null).toString()
       }
 
       if (pkg.author instanceof Object) {
@@ -127,10 +128,11 @@ class Component extends CycloneDXObject {
         } catch (e) { /* pass */ }
       }
 
+      // bomRef defaults to PURL for backwards compatibility reasons
       this.bomRef = this.purl
     } else {
-      this.hashes = new HashList()
-      this.externalReferences = new ExternalReferenceList()
+      this.#hashes = new HashList()
+      this.#externalReferences = new ExternalReferenceList()
     }
   }
 
@@ -431,31 +433,31 @@ class Component extends CycloneDXObject {
    */
   toJSON () {
     return {
-      type: this.type,
-      'bom-ref': this.bomRef,
-      supplier: this.supplier
-        ? this.supplier.toJSON()
+      type: this.#type,
+      'bom-ref': this.#bomRef,
+      supplier: this.#supplier
+        ? this.#supplier.toJSON()
         : undefined,
-      author: this.author,
-      publisher: this.publisher,
-      group: this.group,
-      name: this.name,
-      version: this.version || '',
-      description: this.description,
-      scope: this.scope,
-      hashes: this.hashes && this.hashes.length > 0
-        ? this.hashes.toJSON()
+      author: this.#author,
+      publisher: this.#publisher,
+      group: this.#group,
+      name: this.#name,
+      version: this.#version || '',
+      description: this.#description,
+      scope: this.#scope,
+      hashes: this.#hashes && this.#hashes.length > 0
+        ? this.#hashes.toJSON()
         : undefined,
-      licenses: this.licenses
-        ? this.licenses.toJSON()
+      licenses: this.#licenses
+        ? this.#licenses.toJSON()
         : undefined,
-      copyright: this.copyright,
-      cpe: this.cpe,
-      purl: this.purl,
-      swid: this.swid
-        ? this.swid.toJSON()
+      copyright: this.#copyright,
+      cpe: this.#cpe,
+      purl: this.#purl,
+      swid: this.#swid
+        ? this.#swid.toJSON()
         : undefined,
-      externalReferences: this.externalReferences && this.externalReferences.length > 0
+      externalReferences: this.#externalReferences && this.#externalReferences.length > 0
         ? this.#externalReferences.toJSON()
         : undefined
     }
@@ -467,34 +469,34 @@ class Component extends CycloneDXObject {
   toXML () {
     return {
       component: {
-        '@type': this.type,
-        '@bom-ref': this.bomRef,
-        supplier: this.supplier
-          ? this.supplier.toXML()
+        '@type': this.#type,
+        '@bom-ref': this.#bomRef,
+        supplier: this.#supplier
+          ? this.#supplier.toXML()
           : undefined,
-        author: this.author,
-        publisher: this.publisher,
-        group: this.group,
-        name: this.name,
-        version: this.version || '',
-        description: this.description
-          ? { '#cdata': this.description }
+        author: this.#author,
+        publisher: this.#publisher,
+        group: this.#group,
+        name: this.#name,
+        version: this.#version || '',
+        description: this.#description
+          ? { '#cdata': this.#description }
           : undefined,
-        scope: this.scope,
-        hashes: this.hashes && this.hashes.length > 0
-          ? this.hashes.toXML()
+        scope: this.#scope,
+        hashes: this.#hashes && this.#hashes.length > 0
+          ? this.#hashes.toXML()
           : undefined,
-        licenses: this.licenses
-          ? this.licenses.toXML()
+        licenses: this.#licenses
+          ? this.#licenses.toXML()
           : undefined,
-        copyright: this.copyright,
-        cpe: this.cpe,
-        purl: this.purl,
-        swid: this.swid
-          ? this.swid.toXML()
+        copyright: this.#copyright,
+        cpe: this.#cpe,
+        purl: this.#purl,
+        swid: this.#swid
+          ? this.#swid.toXML()
           : undefined,
-        externalReferences: this.externalReferences && this.externalReferences.length > 0
-          ? this.externalReferences.toXML()
+        externalReferences: this.#externalReferences && this.#externalReferences.length > 0
+          ? this.#externalReferences.toXML()
           : undefined
       }
     }

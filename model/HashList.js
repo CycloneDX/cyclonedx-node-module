@@ -29,6 +29,7 @@ class HashList {
   }
 
   /**
+   * Number of Hashes.
    * @type {number}
    */
   get length () {

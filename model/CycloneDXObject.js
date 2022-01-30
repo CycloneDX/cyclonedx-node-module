@@ -27,7 +27,7 @@ class CycloneDXObject {
    * @param {(TExpectedType|*)} value
    * @param {TExpectedType} expectedType
    * @param {boolean} [required]
-   * @throws {TypeError} if value is not optional and mismatches expectedType
+   * @throws {TypeError} if value is required and mismatches expectedType
    * @returns {(TExpectedType|undefined)}
    */
   validateType (name, value, expectedType, required = false) {
