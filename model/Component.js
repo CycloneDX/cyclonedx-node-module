@@ -28,11 +28,13 @@ const Swid = require('./Swid')
 
 /**
  * Component's scope
+ *
  * @typedef {("required"|"optional"|"excluded")} Component.ComponentScope
  */
 
 /**
  * Component's type
+ *
  * @typedef {("application"|"framework"|"library"|"container"|"operating-system"|"device"|"firmware"|"file")} Component.ComponentType
  */
 
@@ -82,9 +84,9 @@ class Component extends CycloneDXObject {
   // endregion optional properties
 
   /**
-   * @param {(Object|undefined)} [pkg]
+   * @param {(object|undefined)} [pkg]
    * @param {boolean} [includeLicenseText]
-   * @param {(Object|undefined)} [lockfile]
+   * @param {(object|undefined)} [lockfile]
    */
   constructor (pkg, includeLicenseText = true, lockfile) {
     super()
@@ -429,7 +431,7 @@ class Component extends CycloneDXObject {
 
   /**
    *
-   * @returns {Object}
+   * @returns {object}
    */
   toJSON () {
     return {
@@ -464,7 +466,7 @@ class Component extends CycloneDXObject {
   }
 
   /**
-   * @returns {Object}
+   * @returns {object}
    */
   toXML () {
     return {
