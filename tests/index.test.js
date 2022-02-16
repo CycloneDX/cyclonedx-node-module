@@ -123,3 +123,18 @@ test('createbom produces a BOM when there is no name in the root package', done 
     done()
   })
 })
+
+test('special character in license file', done => {
+  // test for https://github.com/CycloneDX/cyclonedx-node-module/issues/255
+  bomHelpers.createbom('library', false, true, './tests/special-character-in-license-file', {  }, (err, bom) => {
+    expect(err).toBe(null)
+    expect(bom).not.toBe(null)
+    bom.metadata.timestamp = timestamp
+    bom.metadata.tools[0].version = programVersion
+    expect(() => {
+      bom.toXML();
+    }).not.toThrow();
+    expect(bom.toXML()).toMatchSnapshot()
+    done()
+  })
+})

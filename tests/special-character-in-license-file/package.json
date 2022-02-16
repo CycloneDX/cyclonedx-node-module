@@ -1,0 +1,12 @@
+{
+  "name": "special_character_in_license_file",
+  "version": "0.0.0",
+  "description": "test license including with special characters like a form feed in the depending license file",
+  "main": "",
+  "scripts": {},
+  "author": "CompartMSL",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "mariadb": "2.5.5"
+  }
+}
