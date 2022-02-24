@@ -49,7 +49,7 @@ class ExternalReferenceList {
   }
 
   processExternalReferences (pkg) {
-    if (pkg.homepage && pkg.homepage.slice(-1) !== ".") {
+    if (pkg.homepage && pkg.homepage.slice(-1) !== '.') {
       this._externalReferences.push(new ExternalReference('website', pkg.homepage))
     }
     if (pkg.bugs && pkg.bugs.url) {
