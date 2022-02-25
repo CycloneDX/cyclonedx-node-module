@@ -49,7 +49,8 @@ class ExternalReferenceList {
   }
 
   processExternalReferences (pkg) {
-    if (pkg.homepage && pkg.homepage.slice(-1) !== '.') {
+    const periodHomepageRegEx = /^http(s)?:\/\/\.$/
+    if (pkg.homepage && !periodHomepageRegEx.test(pkg.homepage)) {
       this._externalReferences.push(new ExternalReference('website', pkg.homepage))
     }
     if (pkg.bugs && pkg.bugs.url) {
