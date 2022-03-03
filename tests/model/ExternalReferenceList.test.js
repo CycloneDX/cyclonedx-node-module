@@ -21,33 +21,30 @@
 
 const ExternalReferenceList = require('../../model/ExternalReferenceList')
 
-test('Homepage should not be present in externalReferences array if solely a period', () => {
-  const includedHomepageUrls = [
-    'http://someurl.com',
-    'https://someurl.com',
-    'https://any.other.string',
-    'https://example.com/#something.',
-    'https://example.com/?foobar=.',
-    'https://example.com/foo/.',
-    'https://example.com/bar.'
-  ]
+describe.each([
+  'http://someurl.com',
+  'https://someurl.com',
+  'https://any.other.string',
+  'https://example.com/#something.',
+  'https://example.com/?foobar=.',
+  'https://example.com/foo/.',
+  'https://example.com/bar.'
+])('Homepage %s', (homepage) => {
+  test('should be present in externalReferences array', () => {
+    const externalReferences = new ExternalReferenceList({ homepage }).externalReferences
 
-  const omittedHomepageUrls = [
-    'http://.',
-    'https://.'
-  ]
-
-  includedHomepageUrls.forEach(homepageUrl => {
-    const pkg = {
-      homepage: homepageUrl
-    }
-    expect(new ExternalReferenceList(pkg).externalReferences.length).toBe(1)
+    expect(externalReferences).toHaveLength(1)
+    expect(externalReferences).toEqual([expect.objectContaining({ url: homepage })])
   })
+})
 
-  omittedHomepageUrls.forEach(homepageUrl => {
-    const pkg = {
-      homepage: homepageUrl
-    }
-    expect(new ExternalReferenceList(pkg).externalReferences.length).toBe(0)
+describe.each([
+  'http://.',
+  'https://.'
+])('Homepage %s', (homepage) => {
+  test('should not be present in externalReferences array', () => {
+    const externalReferences = new ExternalReferenceList({ homepage }).externalReferences
+
+    expect(externalReferences).toHaveLength(0)
   })
 })

@@ -49,8 +49,7 @@ class ExternalReferenceList {
   }
 
   processExternalReferences (pkg) {
-    const periodHomepageRegEx = /^http(s)?:\/\/\.$/
-    if (pkg.homepage && !periodHomepageRegEx.test(pkg.homepage)) {
+    if (pkg.homepage && !ExternalReferenceList.isEligibleHomepage(pkg.homepage)) {
       this._externalReferences.push(new ExternalReference('website', pkg.homepage))
     }
     if (pkg.bugs && pkg.bugs.url) {
@@ -59,6 +58,15 @@ class ExternalReferenceList {
     if (pkg.repository && pkg.repository.url) {
       this._externalReferences.push(new ExternalReference('vcs', pkg.repository.url))
     }
+  }
+
+  /**
+   * Checks the eligibility of the package 'homepage' to be included in the externalReferences array
+   * @param {string} homepage the package homepage
+   * @returns {boolean} `true` if an eligible homepage
+   */
+  static isEligibleHomepage (homepage) {
+    return /^https?:\/\/\.$/.test(homepage)
   }
 
   toJSON () {
