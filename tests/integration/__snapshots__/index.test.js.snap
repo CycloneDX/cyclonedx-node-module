@@ -6220,6 +6220,754 @@ exports[`integration: produce a BOM with development dependencies as XML 1`] = `
 </bom>"
 `;
 
+exports[`integration: produce a BOM with non-ascii characters as JSON 1`] = `
+"{
+  \\"bomFormat\\": \\"CycloneDX\\",
+  \\"specVersion\\": \\"1.3\\",
+  \\"version\\": 1,
+  \\"metadata\\": {
+    \\"timestamp\\": \\"2020-01-01T01:00:00.000Z\\",
+    \\"tools\\": [
+      {
+        \\"vendor\\": \\"CycloneDX\\",
+        \\"name\\": \\"Node.js module\\",
+        \\"version\\": \\"3.0.0\\"
+      }
+    ],
+    \\"component\\": {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/special_character_in_license_file@0.0.0\\",
+      \\"author\\": \\"CompartMSL\\",
+      \\"name\\": \\"special_character_in_license_file\\",
+      \\"version\\": \\"0.0.0\\",
+      \\"description\\": \\"test license including with special characters like a form feed in the depending license file\\",
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"Apache-2.0\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/special_character_in_license_file@0.0.0\\"
+    }
+  },
+  \\"components\\": [
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40types/geojson@7946.0.8\\",
+      \\"group\\": \\"@types\\",
+      \\"name\\": \\"geojson\\",
+      \\"version\\": \\"7946.0.8\\",
+      \\"description\\": \\"TypeScript definitions for geojson\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"d6b92bcb1511a6be9a58fed1efcebf5103a42773dca508969005c199d59ceebc855aa37a6b8c5f2bb06d8d7bc504a3bd2e343e3164125b161e657d4e0299c0ac\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/%40types/geojson@7946.0.8\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/geojson\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/DefinitelyTyped/DefinitelyTyped/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/DefinitelyTyped/DefinitelyTyped.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/%40types/node@14.18.12\\",
+      \\"group\\": \\"@types\\",
+      \\"name\\": \\"node\\",
+      \\"version\\": \\"14.18.12\\",
+      \\"description\\": \\"TypeScript definitions for Node.js\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"ab88e5211ef5854a564e71a15d671a9209197876b70828dc41c9eecd4f0cf3dd410160368c78b38a25843c491d4b9a45b33ec7f47262cbc06b2bbb4144dad8ec\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/%40types/node@14.18.12\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/DefinitelyTyped/DefinitelyTyped/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/DefinitelyTyped/DefinitelyTyped.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/denque@1.5.1\\",
+      \\"author\\": \\"Invertase\\",
+      \\"name\\": \\"denque\\",
+      \\"version\\": \\"1.5.1\\",
+      \\"description\\": \\"The fastest javascript implementation of a double-ended queue. Used by the official Redis, MongoDB, MariaDB & MySQL libraries for Node.js and many other libraries. Maintains compatability with deque.\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"5f013e899e03e99501ee67d844c6f9c01c84f0bef81c29f7d0504deec5a75e4b167352ced5b3c397aee9051f68fe40b8cffc52340c2431870682a0d5dc11371f\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"Apache-2.0\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/denque@1.5.1\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://docs.page/invertase/denque\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/invertase/denque/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/invertase/denque.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/iconv-lite@0.6.3\\",
+      \\"author\\": \\"Alexander Shtuchkin\\",
+      \\"name\\": \\"iconv-lite\\",
+      \\"version\\": \\"0.6.3\\",
+      \\"description\\": \\"Convert character encodings in pure javascript.\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"e1f0a4efdc2c84c773329dab1f4eaa5ab244e22a25a8b842507f8e8ae22053ef91074fbde0d9432fcd5ab4eec65f9e6e50ab9ea34b711cdb6f13223a0fb59d33\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/iconv-lite@0.6.3\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/ashtuchkin/iconv-lite\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/ashtuchkin/iconv-lite/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/ashtuchkin/iconv-lite.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/long@4.0.0\\",
+      \\"author\\": \\"Daniel Wirtz\\",
+      \\"name\\": \\"long\\",
+      \\"version\\": \\"4.0.0\\",
+      \\"description\\": \\"A Long class for representing a 64-bit two's-complement integer value.\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"5ec3fe2a14227f86e35f591bb928b248914d01e84dc602dbea13d1189f50b14afc6a31e4b9719dac79855135145e10f0557d91e5b63824d644c1b52232157e30\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"Apache-2.0\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/long@4.0.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/dcodeIO/long.js#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/dcodeIO/long.js/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/dcodeIO/long.js.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/mariadb@2.5.5\\",
+      \\"author\\": \\"Diego Dupin\\",
+      \\"name\\": \\"mariadb\\",
+      \\"version\\": \\"2.5.5\\",
+      \\"description\\": \\"fast mariadb/mysql connector.\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"e9d925bdc296bae695d498c0c271367b347e8d3b7b26b6477ed81e1c70668c1d3081f694a5dc689750cf59c97031c0abb0ef72a0cd05b823a209c0a05dcffff5\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"LGPL-2.1-or-later\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/mariadb@2.5.5\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/mariadb-corporation/mariadb-connector-nodejs#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://jira.mariadb.org/projects/CONJS/\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/mariadb-corporation/mariadb-connector-nodejs.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/moment-timezone@0.5.34\\",
+      \\"author\\": \\"Tim Wood\\",
+      \\"name\\": \\"moment-timezone\\",
+      \\"version\\": \\"0.5.34\\",
+      \\"description\\": \\"Parse and display moments in any timezone.\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"df30041e1da1294b371172c44b1ff0b20c3a21076eb0e4fc0719b70fd52b1cf411ef394c9b3c326c2f331c4335b50e0b2703fb7dcc6b5abf2db81834e5f1426e\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/moment-timezone@0.5.34\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"http://momentjs.com/timezone/\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/moment/moment-timezone/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/moment/moment-timezone.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/moment@2.29.1\\",
+      \\"author\\": \\"Iskren Ivov Chernev\\",
+      \\"name\\": \\"moment\\",
+      \\"version\\": \\"2.29.1\\",
+      \\"description\\": \\"Parse, validate, manipulate, and display dates\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"9079a8c9b70f57c4aacb9f43c0d0d8dc979fafae252bf6f2fdd6b456215cb80e031f4bd083943a65ee558a6c647d03520be325b3f2b1e77b3b4e33f54611440d\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/moment@2.29.1\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://momentjs.com\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/moment/moment/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/moment/moment.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/please-upgrade-node@3.2.0\\",
+      \\"author\\": \\"typicode\\",
+      \\"name\\": \\"please-upgrade-node\\",
+      \\"version\\": \\"3.2.0\\",
+      \\"description\\": \\"Displays a beginner-friendly message telling your user to upgrade their version of Node\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"8104775a92203482b004c54b929314791dded7f135cb8d9ba834197ea97e90379777c08e61f33c3d00385facbb6bcbbd51af451e6b2bae68ab5b6bc7b38e615a\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/please-upgrade-node@3.2.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/typicode/please-upgrade-node#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/typicode/please-upgrade-node/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/typicode/please-upgrade-node.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/safer-buffer@2.1.2\\",
+      \\"author\\": \\"Nikita Skovoroda\\",
+      \\"name\\": \\"safer-buffer\\",
+      \\"version\\": \\"2.1.2\\",
+      \\"description\\": \\"Modern Buffer API polyfill without footguns\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-512\\",
+          \\"content\\": \\"619a372bcd920fb462ca2d04d4440fa232f3ee4a5ea6749023d2323db1c78355d75debdbe5d248eeda72376003c467106c71bbbdcc911e4d1c6f0a9c42b894b6\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/safer-buffer@2.1.2\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/ChALkeR/safer-buffer#readme\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/ChALkeR/safer-buffer/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git+https://github.com/ChALkeR/safer-buffer.git\\"
+        }
+      ]
+    },
+    {
+      \\"type\\": \\"library\\",
+      \\"bom-ref\\": \\"pkg:npm/semver-compare@1.0.0\\",
+      \\"author\\": \\"James Halliday\\",
+      \\"name\\": \\"semver-compare\\",
+      \\"version\\": \\"1.0.0\\",
+      \\"description\\": \\"compare two semver version strings, returning -1, 0, or 1\\",
+      \\"hashes\\": [
+        {
+          \\"alg\\": \\"SHA-1\\",
+          \\"content\\": \\"0dee216a1c941ab37e9efb1788f6afc5ff5537fc\\"
+        }
+      ],
+      \\"licenses\\": [
+        {
+          \\"license\\": {
+            \\"id\\": \\"MIT\\"
+          }
+        }
+      ],
+      \\"purl\\": \\"pkg:npm/semver-compare@1.0.0\\",
+      \\"externalReferences\\": [
+        {
+          \\"type\\": \\"website\\",
+          \\"url\\": \\"https://github.com/substack/semver-compare\\"
+        },
+        {
+          \\"type\\": \\"issue-tracker\\",
+          \\"url\\": \\"https://github.com/substack/semver-compare/issues\\"
+        },
+        {
+          \\"type\\": \\"vcs\\",
+          \\"url\\": \\"git://github.com/substack/semver-compare.git\\"
+        }
+      ]
+    }
+  ]
+}"
+`;
+
+exports[`integration: produce a BOM with non-ascii characters as XML 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"utf-8\\"?>
+<bom xmlns=\\"http://cyclonedx.org/schema/bom/1.3\\" version=\\"1\\">
+  <metadata>
+    <timestamp>2020-01-01T01:00:00.000Z</timestamp>
+    <tools>
+      <tool>
+        <vendor>CycloneDX</vendor>
+        <name>Node.js module</name>
+        <version>3.0.0</version>
+      </tool>
+    </tools>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/special_character_in_license_file@0.0.0\\">
+      <author>CompartMSL</author>
+      <name>special_character_in_license_file</name>
+      <version>0.0.0</version>
+      <description><![CDATA[test license including with special characters like a form feed in the depending license file]]></description>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/special_character_in_license_file@0.0.0</purl>
+    </component>
+  </metadata>
+  <components>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40types/geojson@7946.0.8\\">
+      <group>@types</group>
+      <name>geojson</name>
+      <version>7946.0.8</version>
+      <description><![CDATA[TypeScript definitions for geojson]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">d6b92bcb1511a6be9a58fed1efcebf5103a42773dca508969005c199d59ceebc855aa37a6b8c5f2bb06d8d7bc504a3bd2e343e3164125b161e657d4e0299c0ac</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40types/geojson@7946.0.8</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/geojson</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/%40types/node@14.18.12\\">
+      <group>@types</group>
+      <name>node</name>
+      <version>14.18.12</version>
+      <description><![CDATA[TypeScript definitions for Node.js]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">ab88e5211ef5854a564e71a15d671a9209197876b70828dc41c9eecd4f0cf3dd410160368c78b38a25843c491d4b9a45b33ec7f47262cbc06b2bbb4144dad8ec</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/%40types/node@14.18.12</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/node</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/DefinitelyTyped/DefinitelyTyped/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/DefinitelyTyped/DefinitelyTyped.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/denque@1.5.1\\">
+      <author>Invertase</author>
+      <name>denque</name>
+      <version>1.5.1</version>
+      <description><![CDATA[The fastest javascript implementation of a double-ended queue. Used by the official Redis, MongoDB, MariaDB & MySQL libraries for Node.js and many other libraries. Maintains compatability with deque.]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">5f013e899e03e99501ee67d844c6f9c01c84f0bef81c29f7d0504deec5a75e4b167352ced5b3c397aee9051f68fe40b8cffc52340c2431870682a0d5dc11371f</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/denque@1.5.1</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://docs.page/invertase/denque</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/invertase/denque/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/invertase/denque.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/iconv-lite@0.6.3\\">
+      <author>Alexander Shtuchkin</author>
+      <name>iconv-lite</name>
+      <version>0.6.3</version>
+      <description><![CDATA[Convert character encodings in pure javascript.]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">e1f0a4efdc2c84c773329dab1f4eaa5ab244e22a25a8b842507f8e8ae22053ef91074fbde0d9432fcd5ab4eec65f9e6e50ab9ea34b711cdb6f13223a0fb59d33</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/iconv-lite@0.6.3</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/ashtuchkin/iconv-lite</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/ashtuchkin/iconv-lite/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git://github.com/ashtuchkin/iconv-lite.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/long@4.0.0\\">
+      <author>Daniel Wirtz</author>
+      <name>long</name>
+      <version>4.0.0</version>
+      <description><![CDATA[A Long class for representing a 64-bit two's-complement integer value.]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">5ec3fe2a14227f86e35f591bb928b248914d01e84dc602dbea13d1189f50b14afc6a31e4b9719dac79855135145e10f0557d91e5b63824d644c1b52232157e30</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>Apache-2.0</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/long@4.0.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/dcodeIO/long.js#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/dcodeIO/long.js/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/dcodeIO/long.js.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/mariadb@2.5.5\\">
+      <author>Diego Dupin</author>
+      <name>mariadb</name>
+      <version>2.5.5</version>
+      <description><![CDATA[fast mariadb/mysql connector.]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">e9d925bdc296bae695d498c0c271367b347e8d3b7b26b6477ed81e1c70668c1d3081f694a5dc689750cf59c97031c0abb0ef72a0cd05b823a209c0a05dcffff5</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>LGPL-2.1-or-later</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/mariadb@2.5.5</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/mariadb-corporation/mariadb-connector-nodejs#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://jira.mariadb.org/projects/CONJS/</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/mariadb-corporation/mariadb-connector-nodejs.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/moment-timezone@0.5.34\\">
+      <author>Tim Wood</author>
+      <name>moment-timezone</name>
+      <version>0.5.34</version>
+      <description><![CDATA[Parse and display moments in any timezone.]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">df30041e1da1294b371172c44b1ff0b20c3a21076eb0e4fc0719b70fd52b1cf411ef394c9b3c326c2f331c4335b50e0b2703fb7dcc6b5abf2db81834e5f1426e</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/moment-timezone@0.5.34</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>http://momentjs.com/timezone/</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/moment/moment-timezone/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/moment/moment-timezone.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/moment@2.29.1\\">
+      <author>Iskren Ivov Chernev</author>
+      <name>moment</name>
+      <version>2.29.1</version>
+      <description><![CDATA[Parse, validate, manipulate, and display dates]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">9079a8c9b70f57c4aacb9f43c0d0d8dc979fafae252bf6f2fdd6b456215cb80e031f4bd083943a65ee558a6c647d03520be325b3f2b1e77b3b4e33f54611440d</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/moment@2.29.1</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://momentjs.com</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/moment/moment/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/moment/moment.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/please-upgrade-node@3.2.0\\">
+      <author>typicode</author>
+      <name>please-upgrade-node</name>
+      <version>3.2.0</version>
+      <description><![CDATA[Displays a beginner-friendly message telling your user to upgrade their version of Node]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">8104775a92203482b004c54b929314791dded7f135cb8d9ba834197ea97e90379777c08e61f33c3d00385facbb6bcbbd51af451e6b2bae68ab5b6bc7b38e615a</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/please-upgrade-node@3.2.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/typicode/please-upgrade-node#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/typicode/please-upgrade-node/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/typicode/please-upgrade-node.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/safer-buffer@2.1.2\\">
+      <author>Nikita Skovoroda</author>
+      <name>safer-buffer</name>
+      <version>2.1.2</version>
+      <description><![CDATA[Modern Buffer API polyfill without footguns]]></description>
+      <hashes>
+        <hash alg=\\"SHA-512\\">619a372bcd920fb462ca2d04d4440fa232f3ee4a5ea6749023d2323db1c78355d75debdbe5d248eeda72376003c467106c71bbbdcc911e4d1c6f0a9c42b894b6</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/safer-buffer@2.1.2</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/ChALkeR/safer-buffer#readme</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/ChALkeR/safer-buffer/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git+https://github.com/ChALkeR/safer-buffer.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+    <component type=\\"library\\" bom-ref=\\"pkg:npm/semver-compare@1.0.0\\">
+      <author>James Halliday</author>
+      <name>semver-compare</name>
+      <version>1.0.0</version>
+      <description><![CDATA[compare two semver version strings, returning -1, 0, or 1]]></description>
+      <hashes>
+        <hash alg=\\"SHA-1\\">0dee216a1c941ab37e9efb1788f6afc5ff5537fc</hash>
+      </hashes>
+      <licenses>
+        <license>
+          <id>MIT</id>
+        </license>
+      </licenses>
+      <purl>pkg:npm/semver-compare@1.0.0</purl>
+      <externalReferences>
+        <reference type=\\"website\\">
+          <url>https://github.com/substack/semver-compare</url>
+        </reference>
+        <reference type=\\"issue-tracker\\">
+          <url>https://github.com/substack/semver-compare/issues</url>
+        </reference>
+        <reference type=\\"vcs\\">
+          <url>git://github.com/substack/semver-compare.git</url>
+        </reference>
+      </externalReferences>
+    </component>
+  </components>
+</bom>"
+`;
+
 exports[`integration: produce a BOM without development dependencies as JSON 1`] = `
 "{
   \\"bomFormat\\": \\"CycloneDX\\",
