@@ -67,6 +67,10 @@ describe('integration:', () => {
         dir: 'no-name',
         purpose: 'when there is no name in the root package',
         options: { dev: true }
+      },
+      {
+        dir: 'special-character-in-license-file',
+        purpose: 'with non-ascii characters'
       }
     ]
   )('produce a BOM $purpose', ({ dir, options = {} }) => {

@@ -23,6 +23,7 @@ const path = require('path')
 const REQUIRES_INSTALL = [
   'no-name',
   'no-packages',
+  'special-character-in-license-file',
   'with-dev-dependencies',
   'with-lockfile-2',
   'with-packages'
