@@ -28,6 +28,10 @@ const REQUIRES_INSTALL = [
   'with-packages'
 ]
 
+const REQUIRES_YARN_INSTALL = [
+  'with-yarn-lockfile'
+]
+
 process.exitCode = 0
 
 let done
@@ -43,5 +47,21 @@ for (const DIR of REQUIRES_INSTALL) {
   if (done.status !== 0) {
     ++process.exitCode
     console.error(done)
+  }
+}
+
+let yarnDone
+for (const DIR of REQUIRES_YARN_INSTALL) {
+  console.log('>>> setup:', DIR)
+  yarnDone = spawnSync(
+    'npx yarn', ['install --frozen-lockfile'], {
+      cwd: path.join(__dirname, DIR),
+      stdio: 'inherit',
+      shell: true
+    }
+  )
+  if (yarnDone.status !== 0) {
+    ++process.exitCode
+    console.error(yarnDone)
   }
 }
