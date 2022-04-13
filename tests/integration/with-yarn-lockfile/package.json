@@ -33,7 +33,8 @@
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=8.0.0",
+    "yarn": ">=1.22.18"
   },
   "repository": {
     "type": "git",
