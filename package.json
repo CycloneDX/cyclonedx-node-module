@@ -79,7 +79,7 @@
     "jest": "27.5.1",
     "jest-junit": "13.2.0",
     "jsdoc": "3.6.10",
-    "standard": "16.0.4"
+    "standard": "17.0.0"
   },
   "standard": {
     "parser": "@babel/eslint-parser",
