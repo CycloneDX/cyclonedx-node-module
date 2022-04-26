@@ -29,7 +29,8 @@ const REQUIRES_NPM_INSTALL = [
 ]
 
 const REQUIRES_YARN_INSTALL = [
-  'with-yarn1-lockfile'
+  'with-yarn1-lockfile',
+  'with-yarn2-lockfile'
 ]
 
 console.warn(`
@@ -59,7 +60,7 @@ for (const DIR of REQUIRES_NPM_INSTALL) {
 for (const DIR of REQUIRES_YARN_INSTALL) {
   console.log('>>> setup with YARN:', DIR)
   done = spawnSync(
-    'npx', ['yarn', 'install', '--frozen-lockfile', '--non-interactive'], {
+    'npx', ['yarn', 'install', '--frozen-lockfile'], {
       cwd: path.resolve(__dirname, DIR),
       stdio: 'inherit',
       shell: true
