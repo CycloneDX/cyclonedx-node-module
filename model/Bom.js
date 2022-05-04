@@ -24,6 +24,7 @@ const CycloneDXObject = require('./CycloneDXObject')
 const Metadata = require('./Metadata')
 const Tool = require('./Tool')
 const program = require('../package.json')
+const Dependency = require('./Dependency')
 
 class Bom extends CycloneDXObject {
   constructor (pkg, componentType, includeSerialNumber = true, includeLicenseText = true, lockfile) {
@@ -74,8 +75,9 @@ class Bom extends CycloneDXObject {
     // read-installed with default options marks devDependencies as extraneous
     // if a package is marked as extraneous, do not include it as a component
     if (pkg.extraneous) return
+    let component
     if (!isRootPkg) {
-      const component = new Component(pkg, this.includeLicenseText, lockfile)
+      component = new Component(pkg, this.includeLicenseText, lockfile)
       if (component.externalReferences === undefined || component.externalReferences.length === 0) {
         delete component.externalReferences
       }
@@ -83,11 +85,16 @@ class Bom extends CycloneDXObject {
       list[component.purl] = component
     }
     if (pkg.dependencies) {
-      Object.keys(pkg.dependencies)
+      const deps = Object.keys(pkg.dependencies)
         .map(x => pkg.dependencies[x])
         .filter(x => typeof (x) !== 'string') // remove cycles
         .map(x => this.createComponent(x, list, lockfile))
+        .filter(x => !!x)
+      if (component && deps.length > 0) {
+        this.addDependency(new Dependency(component.bomRef, deps.map(({ bomRef }) => ({ ref: bomRef }))))
+      }
     }
+    return component
   }
 
   addComponent (component) {
