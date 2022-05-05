@@ -71,7 +71,7 @@ class Dependency extends CycloneDXObject {
     if (this._dependencies && this._dependencies.length > 0) {
       dependencyArray = (
         process.env.BOM_REPRODUCIBLE
-          ? Array.from(this._dependencies).sort((a, b) => a.compare(b))
+          ? Array.from(this._dependencies).sort((a, b) => a.ref.localeCompare(b.ref))
           : this._dependencies
       ).map(d => d.ref)
     }
@@ -86,7 +86,7 @@ class Dependency extends CycloneDXObject {
     if (this._dependencies && this._dependencies.length > 0) {
       dependencyArray = (
         process.env.BOM_REPRODUCIBLE
-          ? Array.from(this._dependencies).sort((a, b) => a.compare(b))
+          ? Array.from(this._dependencies).sort((a, b) => a.ref.localeCompare(b.ref))
           : this._dependencies
       ).map(d => ({ dependency: { '@ref': d.ref } }))
     }
