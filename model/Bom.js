@@ -71,7 +71,7 @@ class Bom extends CycloneDXObject {
   /**
    * Given the specified package, create a CycloneDX component and add it to the list.
    *
-   * @returns {Component}
+   * @returns {(Component|undefined)}
    */
   createComponent (pkg, list, lockfile, isRootPkg = false) {
     // read-installed with default options marks devDependencies as extraneous
@@ -88,17 +88,17 @@ class Bom extends CycloneDXObject {
       if (list[component.purl]) return // remove cycles
       list[component.purl] = component
     }
-    if (pkg.dependencies) {
-      const deps = Object.keys(pkg.dependencies)
-        .map(x => pkg.dependencies[x])
-        .filter(x => typeof (x) !== 'string') // remove cycles
-        .map(x => this.createComponent(x, list, lockfile))
-        .filter(x => !!x)
-        .map(({ bomRef }) => bomRef)
-        .filter(x => !!x)
-      if (component && component.bomRef) {
-        this.addDependency(new Dependency(component.bomRef, deps.map((ref) => new Dependency(ref))))
-      }
+    const deps = pkg.dependencies
+      ? Object.keys(pkg.dependencies)
+          .map(x => pkg.dependencies[x])
+          .filter(x => typeof (x) !== 'string') // remove cycles
+          .map(x => this.createComponent(x, list, lockfile))
+          .filter(x => !!x)
+          .map(({ bomRef }) => bomRef)
+          .filter(x => !!x)
+      : []
+    if (component && component.bomRef) {
+      this.addDependency(new Dependency(component.bomRef, deps.map((ref) => new Dependency(ref))))
     }
     return component
   }
