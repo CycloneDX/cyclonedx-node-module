@@ -70,6 +70,8 @@ class Bom extends CycloneDXObject {
 
   /**
    * Given the specified package, create a CycloneDX component and add it to the list.
+   *
+   * @returns {Component}
    */
   createComponent (pkg, list, lockfile, isRootPkg = false) {
     // read-installed with default options marks devDependencies as extraneous
