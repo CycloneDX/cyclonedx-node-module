@@ -1640,6 +1640,12 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/asap@2.0.6\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/balanced-match@1.0.2\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/brace-expansion@1.1.11\\",
       \\"dependsOn\\": [
         \\"pkg:npm/balanced-match@1.0.2\\",
@@ -1647,10 +1653,25 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/concat-map@0.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/debuglog@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/dezalgo@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/asap@2.0.6\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/figgy-pudding@3.5.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/fs.realpath@1.0.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/function-bind@1.1.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/glob@7.1.7\\",
@@ -1663,10 +1684,16 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/graceful-fs@4.2.8\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/has@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/function-bind@1.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/hosted-git-info@2.8.9\\"
     },
     {
       \\"ref\\": \\"pkg:npm/inflight@1.0.6\\",
@@ -1675,10 +1702,16 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/inherits@2.0.4\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/is-core-module@2.6.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/has@1.0.3\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/json-parse-even-better-errors@2.3.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/minimatch@3.0.4\\",
@@ -1696,6 +1729,9 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/npm-normalize-package-bin@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/once@1.4.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/wrappy@1.0.2\\"
@@ -1706,6 +1742,18 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       \\"dependsOn\\": [
         \\"pkg:npm/urijs@1.19.7\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/parse-packagejson-name@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-is-absolute@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-parse@1.0.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/prettify-xml@1.2.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/read-installed@4.0.3\\",
@@ -1741,10 +1789,19 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/semver@5.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/slide@1.1.6\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/spdx-correct@3.1.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-expression-parse@3.0.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/spdx-exceptions@2.3.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/spdx-expression-parse@3.0.1\\",
@@ -1754,16 +1811,37 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/spdx-license-ids@3.0.10\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/ssri@6.0.2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/figgy-pudding@3.5.2\\"
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/urijs@1.19.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/util-extend@1.0.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/uuid@3.4.0\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/validate-npm-package-license@3.0.4\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-correct@3.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/wrappy@1.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmlbuilder@13.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmldom@0.2.1\\"
     }
   ]
 }"
@@ -2956,13 +3034,20 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
       <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
+    <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
     <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\">
       <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
       <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
+    <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/dezalgo@1.0.3\\">
       <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
+    <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
+    <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     <dependency ref=\\"pkg:npm/glob@7.1.7\\">
       <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
       <dependency ref=\\"pkg:npm/inflight@1.0.6\\"/>
@@ -2970,15 +3055,19 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       <dependency ref=\\"pkg:npm/minimatch@3.0.4\\"/>
       <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/graceful-fs@4.2.8\\"/>
     <dependency ref=\\"pkg:npm/has@1.0.3\\">
       <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/hosted-git-info@2.8.9\\"/>
     <dependency ref=\\"pkg:npm/inflight@1.0.6\\">
       <dependency ref=\\"pkg:npm/once@1.4.0\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/inherits@2.0.4\\"/>
     <dependency ref=\\"pkg:npm/is-core-module@2.6.0\\">
       <dependency ref=\\"pkg:npm/has@1.0.3\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/json-parse-even-better-errors@2.3.1\\"/>
     <dependency ref=\\"pkg:npm/minimatch@3.0.4\\">
       <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\"/>
     </dependency>
@@ -2988,12 +3077,17 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
       <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/npm-normalize-package-bin@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/once@1.4.0\\">
       <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/packageurl-js@0.0.1\\">
       <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/parse-packagejson-name@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
+    <dependency ref=\\"pkg:npm/prettify-xml@1.2.0\\"/>
     <dependency ref=\\"pkg:npm/read-installed@4.0.3\\">
       <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
       <dependency ref=\\"pkg:npm/read-package-json@2.1.2\\"/>
@@ -3015,19 +3109,29 @@ exports[`integration: produce a BOM that includes hashes from package-lock.json 
       <dependency ref=\\"pkg:npm/is-core-module@2.6.0\\"/>
       <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
+    <dependency ref=\\"pkg:npm/slide@1.1.6\\"/>
     <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\">
       <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
     <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\">
       <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
       <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.10\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.10\\"/>
     <dependency ref=\\"pkg:npm/ssri@6.0.2\\">
       <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
+    <dependency ref=\\"pkg:npm/util-extend@1.0.3\\"/>
+    <dependency ref=\\"pkg:npm/uuid@3.4.0\\"/>
     <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\">
       <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
   </dependencies>
 </bom>"
 `;
@@ -3054,7 +3158,12 @@ exports[`integration: produce a BOM that is empty as JSON 1`] = `
       \\"purl\\": \\"pkg:npm/%40cyclonedx/bom-tests-no-packages@0.0.0\\"
     }
   },
-  \\"components\\": []
+  \\"components\\": [],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-tests-no-packages@0.0.0\\"
+    }
+  ]
 }"
 `;
 
@@ -3077,6 +3186,9 @@ exports[`integration: produce a BOM that is empty as XML 1`] = `
     </component>
   </metadata>
   <components/>
+  <dependencies>
+    <dependency ref=\\"pkg:npm/%40cyclonedx/bom-tests-no-packages@0.0.0\\"/>
+  </dependencies>
 </bom>"
 `;
 
@@ -4884,6 +4996,12 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/asap@2.0.6\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/balanced-match@1.0.2\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/brace-expansion@1.1.11\\",
       \\"dependsOn\\": [
         \\"pkg:npm/balanced-match@1.0.2\\",
@@ -4891,10 +5009,25 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/concat-map@0.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/debuglog@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/dezalgo@1.0.4\\",
       \\"dependsOn\\": [
         \\"pkg:npm/asap@2.0.6\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/figgy-pudding@3.5.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/fs.realpath@1.0.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/function-bind@1.1.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/glob@7.2.0\\",
@@ -4907,10 +5040,16 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/graceful-fs@4.2.10\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/has@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/function-bind@1.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/hosted-git-info@2.8.9\\"
     },
     {
       \\"ref\\": \\"pkg:npm/inflight@1.0.6\\",
@@ -4919,10 +5058,16 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/inherits@2.0.4\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/is-core-module@2.8.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/has@1.0.3\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/json-parse-even-better-errors@2.3.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/minimatch@3.1.2\\",
@@ -4940,6 +5085,9 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/npm-normalize-package-bin@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/once@1.4.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/wrappy@1.0.2\\"
@@ -4950,6 +5098,18 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       \\"dependsOn\\": [
         \\"pkg:npm/urijs@1.19.11\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/parse-packagejson-name@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-is-absolute@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-parse@1.0.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/prettify-xml@1.2.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/read-installed@4.0.3\\",
@@ -4986,10 +5146,19 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/semver@5.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/slide@1.1.6\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/spdx-correct@3.1.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-expression-parse@3.0.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/spdx-exceptions@2.3.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/spdx-expression-parse@3.0.1\\",
@@ -4999,16 +5168,40 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/spdx-license-ids@3.0.11\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/ssri@6.0.2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/figgy-pudding@3.5.2\\"
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/supports-preserve-symlinks-flag@1.0.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/urijs@1.19.11\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/util-extend@1.0.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/uuid@3.4.0\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/validate-npm-package-license@3.0.4\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-correct@3.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/wrappy@1.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmlbuilder@13.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmldom@0.2.1\\"
     }
   ]
 }"
@@ -6259,13 +6452,20 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
       <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
+    <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
     <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\">
       <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
       <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
+    <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/dezalgo@1.0.4\\">
       <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
+    <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
+    <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     <dependency ref=\\"pkg:npm/glob@7.2.0\\">
       <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
       <dependency ref=\\"pkg:npm/inflight@1.0.6\\"/>
@@ -6273,15 +6473,19 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       <dependency ref=\\"pkg:npm/minimatch@3.1.2\\"/>
       <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/graceful-fs@4.2.10\\"/>
     <dependency ref=\\"pkg:npm/has@1.0.3\\">
       <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/hosted-git-info@2.8.9\\"/>
     <dependency ref=\\"pkg:npm/inflight@1.0.6\\">
       <dependency ref=\\"pkg:npm/once@1.4.0\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/inherits@2.0.4\\"/>
     <dependency ref=\\"pkg:npm/is-core-module@2.8.1\\">
       <dependency ref=\\"pkg:npm/has@1.0.3\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/json-parse-even-better-errors@2.3.1\\"/>
     <dependency ref=\\"pkg:npm/minimatch@3.1.2\\">
       <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\"/>
     </dependency>
@@ -6291,12 +6495,17 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
       <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/npm-normalize-package-bin@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/once@1.4.0\\">
       <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/packageurl-js@0.0.1\\">
       <dependency ref=\\"pkg:npm/urijs@1.19.11\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/parse-packagejson-name@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
+    <dependency ref=\\"pkg:npm/prettify-xml@1.2.0\\"/>
     <dependency ref=\\"pkg:npm/read-installed@4.0.3\\">
       <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
       <dependency ref=\\"pkg:npm/read-package-json@2.1.2\\"/>
@@ -6319,19 +6528,30 @@ exports[`integration: produce a BOM verify conversion of yarn1 lock to package.j
       <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
       <dependency ref=\\"pkg:npm/supports-preserve-symlinks-flag@1.0.0\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
+    <dependency ref=\\"pkg:npm/slide@1.1.6\\"/>
     <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\">
       <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
     <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\">
       <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
       <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     <dependency ref=\\"pkg:npm/ssri@6.0.2\\">
       <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/supports-preserve-symlinks-flag@1.0.0\\"/>
+    <dependency ref=\\"pkg:npm/urijs@1.19.11\\"/>
+    <dependency ref=\\"pkg:npm/util-extend@1.0.3\\"/>
+    <dependency ref=\\"pkg:npm/uuid@3.4.0\\"/>
     <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\">
       <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
   </dependencies>
 </bom>"
 `;
@@ -6434,15 +6654,16 @@ exports[`integration: produce a BOM when all dependencies are dev-dependencies t
   ],
   \\"dependencies\\": [
     {
-      \\"ref\\": \\"pkg:npm/d3-array@3.1.1\\",
-      \\"dependsOn\\": [
-        \\"pkg:npm/internmap@2.0.3\\"
-      ]
+      \\"ref\\": \\"pkg:npm/d3-array@3.1.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/internmap@2.0.3\\"
     },
     {
       \\"ref\\": \\"pkg:npm/with-dev-dependencies@0.0.0\\",
       \\"dependsOn\\": [
-        \\"pkg:npm/d3-array@3.1.1\\"
+        \\"pkg:npm/d3-array@3.1.1\\",
+        \\"pkg:npm/internmap@2.0.3\\"
       ]
     }
   ]
@@ -6522,9 +6743,12 @@ exports[`integration: produce a BOM when all dependencies are dev-dependencies t
     </component>
   </components>
   <dependencies>
+    <dependency ref=\\"pkg:npm/d3-array@3.1.1\\">
+      <dependency ref=\\"pkg:npm/internmap@2.0.3\\"/>
+    </dependency>
+    <dependency ref=\\"pkg:npm/internmap@2.0.3\\"/>
     <dependency ref=\\"pkg:npm/with-dev-dependencies@0.0.0\\">
       <dependency ref=\\"pkg:npm/d3-array@3.1.1\\"/>
-      <dependency ref=\\"pkg:npm/internmap@2.0.3\\"/>
     </dependency>
   </dependencies>
 </bom>"
@@ -6552,7 +6776,12 @@ exports[`integration: produce a BOM when all dependencies are dev-dependencies t
       \\"purl\\": \\"pkg:npm/with-dev-dependencies@0.0.0\\"
     }
   },
-  \\"components\\": []
+  \\"components\\": [],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/with-dev-dependencies@0.0.0\\"
+    }
+  ]
 }"
 `;
 
@@ -6575,6 +6804,9 @@ exports[`integration: produce a BOM when all dependencies are dev-dependencies t
     </component>
   </metadata>
   <components/>
+  <dependencies>
+    <dependency ref=\\"pkg:npm/with-dev-dependencies@0.0.0\\"/>
+  </dependencies>
 </bom>"
 `;
 
@@ -6623,7 +6855,12 @@ exports[`integration: produce a BOM when no package-lock.json is present as JSON
       ]
     }
   },
-  \\"components\\": []
+  \\"components\\": [],
+  \\"dependencies\\": [
+    {
+      \\"ref\\": \\"pkg:npm/%40cyclonedx/bom-test-no-lockfile@1.1.3\\"
+    }
+  ]
 }"
 `;
 
@@ -6664,6 +6901,9 @@ exports[`integration: produce a BOM when no package-lock.json is present as XML 
     </component>
   </metadata>
   <components/>
+  <dependencies>
+    <dependency ref=\\"pkg:npm/%40cyclonedx/bom-test-no-lockfile@1.1.3\\"/>
+  </dependencies>
 </bom>"
 `;
 
@@ -6767,6 +7007,9 @@ exports[`integration: produce a BOM when there is no name in the root package as
       \\"dependsOn\\": [
         \\"pkg:npm/urijs@1.19.7\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/urijs@1.19.7\\"
     }
   ]
 }"
@@ -6847,6 +7090,7 @@ exports[`integration: produce a BOM when there is no name in the root package as
     <dependency ref=\\"pkg:npm/packageurl-js@0.0.1\\">
       <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
   </dependencies>
 </bom>"
 `;
@@ -8528,6 +8772,12 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/asap@2.0.6\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/balanced-match@1.0.2\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/brace-expansion@1.1.11\\",
       \\"dependsOn\\": [
         \\"pkg:npm/balanced-match@1.0.2\\",
@@ -8535,10 +8785,28 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/concat-map@0.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/debuglog@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/dezalgo@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/asap@2.0.6\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/envinfo@7.8.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/figgy-pudding@3.5.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/fs.realpath@1.0.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/function-bind@1.1.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/glob@7.2.0\\",
@@ -8551,10 +8819,16 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/graceful-fs@4.2.8\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/has@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/function-bind@1.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/hosted-git-info@2.8.9\\"
     },
     {
       \\"ref\\": \\"pkg:npm/inflight@1.0.6\\",
@@ -8563,10 +8837,16 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/inherits@2.0.4\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/is-core-module@2.8.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/has@1.0.3\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/json-parse-even-better-errors@2.3.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/minimatch@3.0.4\\",
@@ -8584,6 +8864,9 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/npm-normalize-package-bin@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/once@1.4.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/wrappy@1.0.2\\"
@@ -8594,6 +8877,18 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       \\"dependsOn\\": [
         \\"pkg:npm/urijs@1.19.7\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/parse-packagejson-name@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-is-absolute@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-parse@1.0.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/prettify-xml@1.2.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/read-installed@4.0.3\\",
@@ -8629,10 +8924,19 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/semver@5.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/slide@1.1.6\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/spdx-correct@3.1.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-expression-parse@3.0.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/spdx-exceptions@2.3.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/spdx-expression-parse@3.0.1\\",
@@ -8642,16 +8946,37 @@ exports[`integration: produce a BOM with development dependencies as JSON 1`] = 
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/spdx-license-ids@3.0.11\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/ssri@6.0.2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/figgy-pudding@3.5.2\\"
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/urijs@1.19.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/util-extend@1.0.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/uuid@3.4.0\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/validate-npm-package-license@3.0.4\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-correct@3.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/wrappy@1.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmlbuilder@13.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmldom@0.2.1\\"
     }
   ]
 }"
@@ -9871,13 +10196,21 @@ exports[`integration: produce a BOM with development dependencies as XML 1`] = `
       <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
       <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
+    <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
     <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\">
       <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
       <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
+    <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/dezalgo@1.0.3\\">
       <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/envinfo@7.8.1\\"/>
+    <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
+    <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
+    <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     <dependency ref=\\"pkg:npm/glob@7.2.0\\">
       <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
       <dependency ref=\\"pkg:npm/inflight@1.0.6\\"/>
@@ -9885,15 +10218,19 @@ exports[`integration: produce a BOM with development dependencies as XML 1`] = `
       <dependency ref=\\"pkg:npm/minimatch@3.0.4\\"/>
       <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/graceful-fs@4.2.8\\"/>
     <dependency ref=\\"pkg:npm/has@1.0.3\\">
       <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/hosted-git-info@2.8.9\\"/>
     <dependency ref=\\"pkg:npm/inflight@1.0.6\\">
       <dependency ref=\\"pkg:npm/once@1.4.0\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/inherits@2.0.4\\"/>
     <dependency ref=\\"pkg:npm/is-core-module@2.8.0\\">
       <dependency ref=\\"pkg:npm/has@1.0.3\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/json-parse-even-better-errors@2.3.1\\"/>
     <dependency ref=\\"pkg:npm/minimatch@3.0.4\\">
       <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\"/>
     </dependency>
@@ -9903,12 +10240,17 @@ exports[`integration: produce a BOM with development dependencies as XML 1`] = `
       <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
       <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/npm-normalize-package-bin@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/once@1.4.0\\">
       <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/packageurl-js@0.0.1\\">
       <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/parse-packagejson-name@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
+    <dependency ref=\\"pkg:npm/prettify-xml@1.2.0\\"/>
     <dependency ref=\\"pkg:npm/read-installed@4.0.3\\">
       <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
       <dependency ref=\\"pkg:npm/read-package-json@2.1.2\\"/>
@@ -9930,19 +10272,29 @@ exports[`integration: produce a BOM with development dependencies as XML 1`] = `
       <dependency ref=\\"pkg:npm/is-core-module@2.8.0\\"/>
       <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
+    <dependency ref=\\"pkg:npm/slide@1.1.6\\"/>
     <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\">
       <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
     <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\">
       <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
       <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     <dependency ref=\\"pkg:npm/ssri@6.0.2\\">
       <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
+    <dependency ref=\\"pkg:npm/util-extend@1.0.3\\"/>
+    <dependency ref=\\"pkg:npm/uuid@3.4.0\\"/>
     <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\">
       <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
   </dependencies>
 </bom>"
 `;
@@ -11587,6 +11939,12 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/asap@2.0.6\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/balanced-match@1.0.2\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/brace-expansion@1.1.11\\",
       \\"dependsOn\\": [
         \\"pkg:npm/balanced-match@1.0.2\\",
@@ -11594,10 +11952,25 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/concat-map@0.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/debuglog@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/dezalgo@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/asap@2.0.6\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/figgy-pudding@3.5.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/fs.realpath@1.0.0\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/function-bind@1.1.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/glob@7.2.0\\",
@@ -11610,10 +11983,16 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/graceful-fs@4.2.8\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/has@1.0.3\\",
       \\"dependsOn\\": [
         \\"pkg:npm/function-bind@1.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/hosted-git-info@2.8.9\\"
     },
     {
       \\"ref\\": \\"pkg:npm/inflight@1.0.6\\",
@@ -11622,10 +12001,16 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/inherits@2.0.4\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/is-core-module@2.8.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/has@1.0.3\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/json-parse-even-better-errors@2.3.1\\"
     },
     {
       \\"ref\\": \\"pkg:npm/minimatch@3.0.4\\",
@@ -11643,6 +12028,9 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/npm-normalize-package-bin@1.0.1\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/once@1.4.0\\",
       \\"dependsOn\\": [
         \\"pkg:npm/wrappy@1.0.2\\"
@@ -11653,6 +12041,18 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       \\"dependsOn\\": [
         \\"pkg:npm/urijs@1.19.7\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/parse-packagejson-name@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-is-absolute@1.0.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/path-parse@1.0.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/prettify-xml@1.2.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/read-installed@4.0.3\\",
@@ -11688,10 +12088,19 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/semver@5.7.1\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/slide@1.1.6\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/spdx-correct@3.1.1\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-expression-parse@3.0.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/spdx-exceptions@2.3.0\\"
     },
     {
       \\"ref\\": \\"pkg:npm/spdx-expression-parse@3.0.1\\",
@@ -11701,16 +12110,37 @@ exports[`integration: produce a BOM without development dependencies as JSON 1`]
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/spdx-license-ids@3.0.11\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/ssri@6.0.2\\",
       \\"dependsOn\\": [
         \\"pkg:npm/figgy-pudding@3.5.2\\"
       ]
     },
     {
+      \\"ref\\": \\"pkg:npm/urijs@1.19.7\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/util-extend@1.0.3\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/uuid@3.4.0\\"
+    },
+    {
       \\"ref\\": \\"pkg:npm/validate-npm-package-license@3.0.4\\",
       \\"dependsOn\\": [
         \\"pkg:npm/spdx-correct@3.1.1\\"
       ]
+    },
+    {
+      \\"ref\\": \\"pkg:npm/wrappy@1.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmlbuilder@13.0.2\\"
+    },
+    {
+      \\"ref\\": \\"pkg:npm/xmldom@0.2.1\\"
     }
   ]
 }"
@@ -12903,13 +13333,20 @@ exports[`integration: produce a BOM without development dependencies as XML 1`] 
       <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
       <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
+    <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
     <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\">
       <dependency ref=\\"pkg:npm/balanced-match@1.0.2\\"/>
       <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/concat-map@0.0.1\\"/>
+    <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/dezalgo@1.0.3\\">
       <dependency ref=\\"pkg:npm/asap@2.0.6\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
+    <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
+    <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     <dependency ref=\\"pkg:npm/glob@7.2.0\\">
       <dependency ref=\\"pkg:npm/fs.realpath@1.0.0\\"/>
       <dependency ref=\\"pkg:npm/inflight@1.0.6\\"/>
@@ -12917,15 +13354,19 @@ exports[`integration: produce a BOM without development dependencies as XML 1`] 
       <dependency ref=\\"pkg:npm/minimatch@3.0.4\\"/>
       <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/graceful-fs@4.2.8\\"/>
     <dependency ref=\\"pkg:npm/has@1.0.3\\">
       <dependency ref=\\"pkg:npm/function-bind@1.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/hosted-git-info@2.8.9\\"/>
     <dependency ref=\\"pkg:npm/inflight@1.0.6\\">
       <dependency ref=\\"pkg:npm/once@1.4.0\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/inherits@2.0.4\\"/>
     <dependency ref=\\"pkg:npm/is-core-module@2.8.0\\">
       <dependency ref=\\"pkg:npm/has@1.0.3\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/json-parse-even-better-errors@2.3.1\\"/>
     <dependency ref=\\"pkg:npm/minimatch@3.0.4\\">
       <dependency ref=\\"pkg:npm/brace-expansion@1.1.11\\"/>
     </dependency>
@@ -12935,12 +13376,17 @@ exports[`integration: produce a BOM without development dependencies as XML 1`] 
       <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
       <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/npm-normalize-package-bin@1.0.1\\"/>
     <dependency ref=\\"pkg:npm/once@1.4.0\\">
       <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
     </dependency>
     <dependency ref=\\"pkg:npm/packageurl-js@0.0.1\\">
       <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/parse-packagejson-name@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-is-absolute@1.0.1\\"/>
+    <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
+    <dependency ref=\\"pkg:npm/prettify-xml@1.2.0\\"/>
     <dependency ref=\\"pkg:npm/read-installed@4.0.3\\">
       <dependency ref=\\"pkg:npm/debuglog@1.0.1\\"/>
       <dependency ref=\\"pkg:npm/read-package-json@2.1.2\\"/>
@@ -12962,19 +13408,29 @@ exports[`integration: produce a BOM without development dependencies as XML 1`] 
       <dependency ref=\\"pkg:npm/is-core-module@2.8.0\\"/>
       <dependency ref=\\"pkg:npm/path-parse@1.0.7\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/semver@5.7.1\\"/>
+    <dependency ref=\\"pkg:npm/slide@1.1.6\\"/>
     <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\">
       <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
     <dependency ref=\\"pkg:npm/spdx-expression-parse@3.0.1\\">
       <dependency ref=\\"pkg:npm/spdx-exceptions@2.3.0\\"/>
       <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/spdx-license-ids@3.0.11\\"/>
     <dependency ref=\\"pkg:npm/ssri@6.0.2\\">
       <dependency ref=\\"pkg:npm/figgy-pudding@3.5.2\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/urijs@1.19.7\\"/>
+    <dependency ref=\\"pkg:npm/util-extend@1.0.3\\"/>
+    <dependency ref=\\"pkg:npm/uuid@3.4.0\\"/>
     <dependency ref=\\"pkg:npm/validate-npm-package-license@3.0.4\\">
       <dependency ref=\\"pkg:npm/spdx-correct@3.1.1\\"/>
     </dependency>
+    <dependency ref=\\"pkg:npm/wrappy@1.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmlbuilder@13.0.2\\"/>
+    <dependency ref=\\"pkg:npm/xmldom@0.2.1\\"/>
   </dependencies>
 </bom>"
 `;

@@ -96,8 +96,8 @@ class Bom extends CycloneDXObject {
         .filter(x => !!x)
         .map(({ bomRef }) => bomRef)
         .filter(x => !!x)
-      if (component && component.bomRef && deps.length > 0) {
-        this.addDependency(new Dependency(component.bomRef, deps.map((ref) => ({ ref }))))
+      if (component && component.bomRef) {
+        this.addDependency(new Dependency(component.bomRef, deps.map((ref) => new Dependency(ref))))
       }
     }
     return component
