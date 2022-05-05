@@ -4,10 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 3.8.1 - 2022-05-05
+
+* Fixed
+  * Added missing handling of `Dependency` when environment variable `BOM_REPRODUCIBLE` is present. (via [#297])
 * Misc:
   * Worked packaging from whitelist to blacklist to add files, like `NOTICE`. (via [#289])
 
 [#289]: https://github.com/CycloneDX/cyclonedx-node-module/pull/289
+[#297]: https://github.com/CycloneDX/cyclonedx-node-module/pull/297
 
 ## 3.8.0 - 2022-04-24
 
