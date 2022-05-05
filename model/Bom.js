@@ -76,7 +76,9 @@ class Bom extends CycloneDXObject {
     // if a package is marked as extraneous, do not include it as a component
     if (pkg.extraneous) return
     let component
-    if (!isRootPkg) {
+    if (isRootPkg) {
+      component = this._metadata.component
+    } else {
       component = new Component(pkg, this.includeLicenseText, lockfile)
       if (component.externalReferences === undefined || component.externalReferences.length === 0) {
         delete component.externalReferences
@@ -90,8 +92,10 @@ class Bom extends CycloneDXObject {
         .filter(x => typeof (x) !== 'string') // remove cycles
         .map(x => this.createComponent(x, list, lockfile))
         .filter(x => !!x)
-      if (component && deps.length > 0) {
-        this.addDependency(new Dependency(component.bomRef, deps.map(({ bomRef }) => ({ ref: bomRef }))))
+        .map(({ bomRef }) => bomRef)
+        .filter(x => !!x)
+      if (component && component.bomRef && deps.length > 0) {
+        this.addDependency(new Dependency(component.bomRef, deps.map((ref) => ({ ref }))))
       }
     }
     return component
