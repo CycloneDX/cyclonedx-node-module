@@ -69,7 +69,7 @@
     "xmlbuilder": "^15.1.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.17.0",
+    "@babel/eslint-parser": "7.18.2",
     "jest": "27.5.1",
     "jest-junit": "13.2.0",
     "jsdoc": "3.6.10",
