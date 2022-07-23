@@ -1,6 +1,5 @@
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_npm-version]][link_npm]
-[![shield_docker-version]][link_docker]
 [![shield_license]][license_file]  
 [![shield_website]][link_website]
 [![shield_slack]][link_slack]
@@ -9,93 +8,33 @@
 
 ----
 
-# CycloneDX Node.js Module
+# CycloneDX BOM
 
-The CycloneDX module for Node.js creates a valid CycloneDX Software Bill-of-Materials (SBOM) containing an aggregate of all project dependencies. CycloneDX is a lightweight SBOM specification that is easily created, human and machine readable, and simple to parse.
+This is a so-called **meta-package**, it does not ship any own functionality, but it is a collection of dependencies.
+This package's dependencies are tools with one purpose:
+generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _node_-based projects.
 
-## Requirements
+* for    _npm_-based projects: [`@cyclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
+* for   _yarn_-based projects: to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn -->
+* for   _pnpm_-based projects: to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm -->
+* for _parcel_-based projects: to be announced
 
-Node.js v12.0.0 or higher
+💡 You should not depend on this very package, but the actual tool that suites your specific ecosystem.
 
-## Usage
+💡 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
+then you might want to try [`@cyclonedx/cyclonedx-library`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
 
-### Installing
+---
 
-```sh
-npm install -g @cyclonedx/bom
-```
+## Previous versions
 
-### Getting Help
+This project used to be a tool-set and a library to work and generate [CycloneDX][link_website] Software Bill-of-Materials (SBOM) from _npm_ and _yarn_ based projects.  
+Since version 4 this was all split to individual projects, and this project changed to a bare meta-package.
 
-```text
-$ cyclonedx-node -h
-Usage: cyclonedx-node [options] [path]
-
-Creates CycloneDX Software Bill of Materials (SBOM) from Node.js projects
-
-Arguments:
-  path                        Path to analyze
-
-Options:
-  -v, --version               output the version number
-  -d, --include-dev           Include devDependencies (default: false)
-  -l, --include-license-text  Include full license text (default: false)
-  -o, --output <output>       Write BOM to file (default: "bom.xml")
-  -t, --type <type>           Project type (default: "library")
-  -ns, --no-serial-number     Do not include BOM serial number
-  -h, --help                  display help for command
-
-Environment variable BOM_REPRODUCIBLE causes bom result to be more consistent
-over multiple runs by omitting time/rand-based values, and sorting lists.
-```
-
-### Example (default: XML)
-
-```shell
-cyclonedx-node
-```
-
-### Example (XML)
-
-```shell
-cyclonedx-node --output bom.xml
-```
-
-### Example (JSON)
-
-```shell
-cyclonedx-node --output bom.json
-```
-
-### Usage with docker
-
-Run `cyclonedx/cyclonedx-node` docker image inside your project folder, just like:
-
-```shell
-docker run --rm \
-  --volume "$PWD":/src \
-  cyclonedx/cyclonedx-node --output bom.xml
-```
-
-All options explained above are supported.
-
-## CycloneDX Schema Support
-
-The following table provides information on the version of
-this node module,
-the CycloneDX schema version supported,
-as well as the output format options.  
-Use the latest possible version of this node module that is the compatible with
-the CycloneDX version supported by the target system.
-Or use the [CycloneDX CLI Tool](https://github.com/CycloneDX/cyclonedx-cli/)
-to convert to older specification versions as required.
-
-| Version | Schema Version | Format(s) |
-| --- | --- | --- |
-| `3.*.*` | CycloneDX v1.3 | XML/JSON |
-| `2.*.*` | CycloneDX v1.2 | XML/JSON |
-| `1.1.*` | CycloneDX v1.1 | XML |
-| `1.0.*` | CycloneDX v1.0 | XML |
+Previous versions of this very package are still available 
+via [npmjs versions](https://www.npmjs.com/package/%40cyclonedx/bom?activeTab=versions) 
+and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/releases)
+.
 
 ## Contributing
 
