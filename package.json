@@ -12,7 +12,7 @@
     "url": "https://github.com/CycloneDX/cyclonedx-node-module/issues"
   },
   "copyright": "Copyright OWASP Foundation",
-  "dependencies": {
+  "optionalDependencies": {
     "@cyclonedx/cyclonedx-npm": "*"
   }
 }
