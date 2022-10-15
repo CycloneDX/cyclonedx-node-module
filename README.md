@@ -24,6 +24,19 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 💡 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
 then you might want to try [`@cyclonedx/cyclonedx-library`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
 
+## Contributing
+
+You want to have a certain node-based tool added?  
+Feel free to open issues, bugreports or pull requests.  
+See the [CONTRIBUTING][contributing_file] file for details.
+
+## Copyright & License
+
+CycloneDX Node Module is Copyright (c) OWASP Foundation. All Rights Reserved.
+
+Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.
+See the [LICENSE][license_file] file for the full license.
+
 ---
 
 ## Previous versions
@@ -34,19 +47,6 @@ Since version 4 this was all split to individual projects, and this project chan
 Previous versions of this very package are still available 
 via [npmjs versions](https://www.npmjs.com/package/%40cyclonedx/bom?activeTab=versions) 
 and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/releases)
-.
-
-## Contributing
-
-Feel free to open issues, bugreports or pull requests.  
-See the [CONTRIBUTING][contributing_file] file for details.
-
-## Copyright & License
-
-CycloneDX Node Module is Copyright (c) OWASP Foundation. All Rights Reserved.
-
-Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.
-See the [LICENSE][license_file] file for the full license.
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-module/blob/master/LICENSE
 [contributing_file]: https://github.com/CycloneDX/cyclonedx-node-module/blob/master/CONTRIBUTING.md
