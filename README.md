@@ -11,7 +11,7 @@
 # CycloneDX BOM
 
 This is a so-called **meta-package**, it does not ship any own functionality, but it is a collection of optional dependencies.
-This package's dependencies are tools with one purpose:
+This package's dependencies are tools with one purpose in common:
 generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _node_-based projects.
 
 | ecosystem | actual tool |
