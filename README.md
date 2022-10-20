@@ -14,15 +14,17 @@ This is a so-called **meta-package**, it does not ship any own functionality, bu
 This package's dependencies are tools with one purpose:
 generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _node_-based projects.
 
-* for    _npm_-based projects: [`@cyclonedx/cyclonedx-npm`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
-* for   _yarn_-based projects: to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn -->
-* for   _pnpm_-based projects: to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm -->
-* for _parcel_-based projects: to be announced
+| ecosystem | actual tool |
+|:---------:|:------------|
+| _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
+| _yarn_ | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
+| _pnpm_ | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
+| _parcel_ | to be announced |
 
 💡 You should not depend on this very package, but the actual tool that suites your specific ecosystem.
 
 💡 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
-then you might want to try [`@cyclonedx/cyclonedx-library`](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
+then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
 
 ## Contributing
 
