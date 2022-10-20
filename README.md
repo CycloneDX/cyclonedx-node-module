@@ -39,15 +39,15 @@ CycloneDX Node Module is Copyright (c) OWASP Foundation. All Rights Reserved.
 Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.
 See the [LICENSE][license_file] file for the full license.
 
----
+----
 
 ## Previous versions
 
 This project used to be a tool-set and a library to work and generate [CycloneDX][link_website] Software Bill-of-Materials (SBOM) from _npm_ and _yarn_ based projects.  
-Since version 4 this was all split to individual projects, and this project changed to a bare meta-package.
+Since version 4.0, this was all split to individual projects, and this project changed to a bare meta-package.
 
-Previous versions of this very package are still available 
-via [npmjs versions](https://www.npmjs.com/package/%40cyclonedx/bom?activeTab=versions) 
+Previous versions of this very package are still available
+via [npmjs versions](https://www.npmjs.com/package/%40cyclonedx/bom?activeTab=versions)
 and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/releases)
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-module/blob/master/LICENSE
