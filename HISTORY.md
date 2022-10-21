@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 4.0.2 - 2022-10-21
+
+* Docs:
+  * Fixed some typos
+
 ## 4.0.1 - 2022-10-21
 
 * Docs:
