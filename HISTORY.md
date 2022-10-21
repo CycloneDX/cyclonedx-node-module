@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 4.0.1 - 2022-10-21
+
+* Docs:
+  * Describe the "Out of Scope" section (via [#342])
+  * Fixed some typos
+
+[#342]: https://github.com/CycloneDX/cyclonedx-node-module/pull/342
+
 ## 4.0.0 - 2022-10-21
 
 This became a so-called **meta-package**, it does not ship any own functionality, but it is a collection of dependencies. (via [#321])
@@ -14,7 +22,6 @@ generate _CycloneDX_ Software Bill-of-Materials (SBOM) from _node_-based project
 * for    _npm_-based projects: [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
 * for   _yarn_-based projects: to be announced
 * for   _pnpm_-based projects: to be announced
-* for _parcel_-based projects: to be announced
 
 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
 then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
