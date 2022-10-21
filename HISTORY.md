@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 4.0.1 - 2022-10-21
+
+* Docs:
+  * Describe the "Out of Scope" section (via [#342])
+  * Fixed some typos
+
+[#342]: https://github.com/CycloneDX/cyclonedx-node-module/pull/342
+
 ## 4.0.0 - 2022-10-21
 
 This became a so-called **meta-package**, it does not ship any own functionality, but it is a collection of dependencies. (via [#321])
