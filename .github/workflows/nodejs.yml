@@ -95,7 +95,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         with:
           version: latest
       - name: install project
