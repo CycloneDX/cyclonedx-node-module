@@ -16,7 +16,7 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _npm_     | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
+| _npm_     | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/@cyclonedx/cyclonedx-npm) |
 | _yarn_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
 | _pnpm_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
 
@@ -29,15 +29,15 @@ These ecosystems are out of scope. Therefore, the following packages are not par
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
-| _Angular_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
-| _React_   | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
+| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
+| _Angular_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
+| _React_   | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
 | _Parcel_  | to be announced |
 
 ## Library
 
 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
-then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
+then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/@cyclonedx/cyclonedx-library).
 
 ## Contributing
 
@@ -60,7 +60,7 @@ This project used to be a tool-set and a library to work and generate [CycloneDX
 Since version 4.0, this was all split to individual projects, and this project changed to a bare meta-package.
 
 Previous versions of this very package are still available
-via [npmjs versions](https://www.npmjs.com/package/%40cyclonedx/bom?activeTab=versions)
+via [npmjs versions](https://www.npmjs.com/package/@cyclonedx/bom?activeTab=versions)
 and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/releases)
 
 [license_file]: https://github.com/CycloneDX/cyclonedx-node-module/blob/master/LICENSE
@@ -75,7 +75,7 @@ and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/release
 [shield_groups]: https://img.shields.io/badge/discussion-groups.io-blue.svg "groups discussion"
 [shield_twitter-follow]: https://img.shields.io/badge/Twitter-follow-blue?logo=Twitter&logoColor=white "twitter follow"
 [link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-module/actions/workflows/nodejs.yml?query=branch%3Amaster
-[link_npm]: https://www.npmjs.com/package/%40cyclonedx/bom
+[link_npm]: https://www.npmjs.com/package/@cyclonedx/bom
 [link_docker]: https://hub.docker.com/r/cyclonedx/cyclonedx-node
 [link_website]: https://cyclonedx.org/
 [link_slack]: https://cyclonedx.org/slack/invite
