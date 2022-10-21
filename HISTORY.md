@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 This became a so-called **meta-package**, it does not ship any own functionality, but it is a collection of dependencies. (via [#321])
 
-This package's dependencies are tools with one purpose:
+This package's dependencies are tools with one purpose in common:
 generate _CycloneDX_ Software Bill-of-Materials (SBOM) from _node_-based projects.
 
 * for    _npm_-based projects: [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
