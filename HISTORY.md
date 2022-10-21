@@ -14,7 +14,6 @@ generate _CycloneDX_ Software Bill-of-Materials (SBOM) from _node_-based project
 * for    _npm_-based projects: [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm)
 * for   _yarn_-based projects: to be announced
 * for   _pnpm_-based projects: to be announced
-* for _parcel_-based projects: to be announced
 
 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
 then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).

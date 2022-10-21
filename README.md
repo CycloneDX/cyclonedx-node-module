@@ -16,14 +16,27 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
-| _yarn_ | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
-| _pnpm_ | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
-| _parcel_ | to be announced |
+| _npm_     | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
+| _yarn_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
+| _pnpm_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
 
-💡 You should not depend on this very package, but the actual tool that suites your specific ecosystem.
+You should not depend on this very meta-package, but the actual tool that suites your specific ecosystem.
 
-💡 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
+## Out of Scope
+
+There are ecosystems, that are not node-based, but use node as a runtime/compiler environment.
+These ecosystems are out of scope. Therefore, the following packages are not part of this very meta-package.
+
+| ecosystem | actual tool |
+|:---------:|:------------|
+| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
+| _Angular_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
+| _React_   | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
+| _Parcel_  | to be announced |
+
+## Library
+
+If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
 then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
 
 ## Contributing
