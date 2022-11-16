@@ -11,7 +11,7 @@
 # CycloneDX BOM
 
 This is a so-called **meta-package**, it does not ship any own functionality, but it is a collection of optional dependencies.
-This package's dependencies are tools with one purpose in common:
+This package's dependencies are tools with one purpose in common:  
 generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _node_-based projects.
 
 | ecosystem | actual tool |
@@ -20,11 +20,11 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 | _yarn_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
 | _pnpm_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
 
-You should not depend on this very meta-package, but the actual tool that suites your specific ecosystem.
+You should not depend on this very meta-package, instead depend on the actual tool that suites your specific ecosystem.
 
 ## Out of Scope
 
-There are ecosystems, that are not node-based, but use node as a runtime/compiler environment.
+There are ecosystems, that are not node-based, but use node as a runtime/compiler environment.  
 These ecosystems are out of scope. Therefore, the following packages are not part of this very meta-package.
 
 | ecosystem | actual tool |
@@ -49,7 +49,7 @@ See the [CONTRIBUTING][contributing_file] file for details.
 
 CycloneDX Node Module is Copyright (c) OWASP Foundation. All Rights Reserved.
 
-Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.
+Permission to modify and redistribute is granted under the terms of the Apache 2.0 license.  
 See the [LICENSE][license_file] file for the full license.
 
 ----
