@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+* Docs
+  * fix CI/CT shield ([badges/shields#8671] via [#346])
+
+[badges/shields#8671]: https://github.com/badges/shields/issues/8671
+[#346]: https://github.com/CycloneDX/cyclonedx-node-module/pull/346
+
 ## 4.0.2 - 2022-10-21
 
 * Docs:
