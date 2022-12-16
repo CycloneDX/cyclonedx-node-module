@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 4.0.3 - 2022-12-16
+
 * Docs
   * fix CI/CT shield ([badges/shields#8671] via [#346])
 
