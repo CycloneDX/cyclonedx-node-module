@@ -24,7 +24,7 @@ on:
         required: false
 
 env:
-  NODE_ACTIVE_LTS: "16"
+  NODE_ACTIVE_LTS: "18"
 
 jobs:
   bump:
