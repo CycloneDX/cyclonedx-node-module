@@ -22,6 +22,11 @@ on:
           - alpha
         default: rc
         required: false
+      prerelease:
+        description: "This a pre-release"
+        type: boolean
+        default: false
+        required: false
 
 env:
   NODE_ACTIVE_LTS: "18"
@@ -83,12 +88,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
-      - name: publish to NPMJS
-        run: |
-          npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
-          npm publish --access public
+      - name: login to NPMJS
+        run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: publish to NPMJS as "latest"
+        if: ${{ github.event.inputs.prerelease != 'true' }}
+        run: npm publish --access public --tag 'latest'
+      - name: publish to NPMJS as "unstable-prerelease"
+        if: ${{ github.event.inputs.prerelease == 'true' }}
+        run: npm publish --access public --tag 'unstable-prerelease'
   release-GH:
     needs:
       - "bump"
@@ -104,6 +113,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ needs.bump.outputs.version }}
-          name:     ${{ needs.bump.outputs.version_plain }}
-          prerelease: ${{ startsWith(github.event.inputs.newversion, 'pre') || contains(github.event.inputs.newversion, 'rc') || contains(github.event.inputs.newversion, 'beta') || contains(github.event.inputs.newversion, 'alpha')}}
+          tag_name:   ${{ needs.bump.outputs.version }}
+          name:       ${{ needs.bump.outputs.version_plain }}
+          prerelease: ${{ github.event.inputs.prerelease }}
