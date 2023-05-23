@@ -29,6 +29,7 @@ on:
         required: false
 
 env:
+  # https://nodejs.dev/en/about/releases/
   NODE_ACTIVE_LTS: "18"
 
 jobs:

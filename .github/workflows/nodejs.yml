@@ -9,6 +9,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 ## As this project is a meta-package, there are no functionalities nor tests.
 ## So the only responsibility that must be assured is: this project can be installed under all circumstances.
 jobs:
@@ -23,7 +27,7 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "19"      # Current
+          - "20"      # Current
           - "18"      # Active LTS
           - "16"
           - "14"
@@ -54,7 +58,7 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "19"      # Current
+          - "20"      # Current
           - "18"      # Active LTS
           - "16"
           - "14"
@@ -83,10 +87,14 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "19"      # Current
+          - "20"      # Current
           - "18"      # Active LTS
           - "16"
-          - "14"
+        pnpm-version: [ "latest" ]
+        include:
+          - os: "ubuntu-latest"
+            node-version: "14"
+            pnpm-version: "latest-7"  # see https://www.npmjs.com/package/pnpm/?activeTab=versions
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -100,7 +108,7 @@ jobs:
         ## see https://github.com/pnpm/action-setup
         uses: pnpm/action-setup@v2.2.4
         with:
-          version: latest
+          version: ${{ matrix.pnpm-version }}
       - name: install project
         run: >
           pnpm install
