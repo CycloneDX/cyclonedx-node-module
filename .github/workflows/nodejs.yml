@@ -5,9 +5,12 @@ name: Node CI
 
 on:
   push:
-    branches: ["master"]
+    branches: [ "master" ]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - # test every sunday, if the setup still works
+      cron:  '20 4 * * SUN'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
