@@ -20,7 +20,7 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 | _yarn_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
 | _pnpm_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
 
-You should not depend on this very meta-package, instead depend on the actual tool that suites your specific ecosystem.
+You should not depend on this very meta-package, instead depend on the actual tool that fits your specific ecosystem.
 
 ## Out of Scope
 
