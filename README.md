@@ -33,6 +33,7 @@ These ecosystems are out of scope. Therefore, the following packages are not par
 | _Angular_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
 | _React_   | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
 | _Parcel_  | to be announced |
+| _Bower_   | to be announced |
 
 ## Library
 
