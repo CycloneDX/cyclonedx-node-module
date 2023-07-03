@@ -17,8 +17,8 @@ generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _nod
 | ecosystem | actual tool |
 |:---------:|:------------|
 | _npm_     | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/@cyclonedx/cyclonedx-npm) |
-| _yarn_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
-| _pnpm_    | to be announced <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
+| _yarn_    | to be announced, suggestions welcome <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
+| _pnpm_    | to be announced, suggestions welcome <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
 
 You should not depend on this very meta-package, instead depend on the actual tool that fits your specific ecosystem.
 
@@ -30,10 +30,10 @@ These ecosystems are out of scope. Therefore, the following packages are not par
 | ecosystem | actual tool |
 |:---------:|:------------|
 | _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
-| _Angular_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
-| _React_   | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
-| _Parcel_  | to be announced |
-| _Bower_   | to be announced |
+| _Angular_ | [@cyclonedx/webpack-plugin with Angular](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
+| _React_   | [@cyclonedx/webpack-plugin with React](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
+| _Parcel_  | to be announced, suggestions welcome |
+| _Bower_   | None. Bower is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) |
 
 ## Library
 
