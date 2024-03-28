@@ -11,29 +11,37 @@
 # CycloneDX BOM
 
 This is a so-called **meta-package**, it does not ship any own functionality, but it is a collection of optional dependencies.
-This package's dependencies are tools with one purpose in common:  
-generate _[CycloneDX][link_website]_ Software Bill-of-Materials (SBOM) from _node_-based projects.
+This package's dependencies are tools* with one purpose in common:  
+generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _node_-based projects.
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _npm_     | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/@cyclonedx/cyclonedx-npm) |
-| _yarn_    | to be announced, suggestions welcome <!-- maybe https://github.com/CycloneDX/cyclonedx-node-yarn --> |
-| _pnpm_    | to be announced, suggestions welcome <!-- maybe https://github.com/CycloneDX/cyclonedx-node-pnpm --> |
+| _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/@cyclonedx/cyclonedx-npm) |
+| _pnpm_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
 
-You should not depend on this very meta-package, instead depend on the actual tool that fits your specific ecosystem.
+*) You should not depend on this very meta-package, instead depend on the actual tool that fits your specific (eco)system.
+
+In addition, there are some tools to mention, that are not installable as a dependency (yet) but require other/manual methods of installation.
+
+| ecosystem | actual tool |
+|:---------:|:------------|
+| _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://github.com/CycloneDX/cyclonedx-node-yarn#readme) |
 
 ## Out of Scope
 
-There are ecosystems, that are not node-based, but use node as a runtime/compiler environment.  
-These ecosystems are out of scope. Therefore, the following packages are not part of this very meta-package.
+There are systems, that are not node-targeting, but use node as a runtime/compiler environment, or use node package registry as a distribution system.
+These systems are out of scope. Therefore, the following tools are not part of this very meta-package.
 
-| ecosystem | actual tool |
-|:---------:|:------------|
+| system | actual tool(s) |
+|:------:|:------------|
 | _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
+| _esbuild_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-esbuild-plugin](https://github.com/CycloneDX/cyclonedx-esbuild-plugin) |
+| _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Angular_ | [@cyclonedx/webpack-plugin with Angular](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
-| _React_   | [@cyclonedx/webpack-plugin with React](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
-| _Parcel_  | to be announced, suggestions welcome |
-| _Bower_   | None. Bower is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/) |
+| _React_ | [@cyclonedx/webpack-plugin with React](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
+| _Svelte_ | To be announced, suggestions welcome |
+| _Parcel_ | To be announced, suggestions welcome |
+| _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 
 ## Library
 
