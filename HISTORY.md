@@ -4,10 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+## 4.0.4 - 2024-03-28
+
+* Docs
+  * Acknowledge tools for _yarn_, _esbuild_, _Rspack_/_Rsbuid_, _Svelte_ (via [#359])
+
+[#359]: https://github.com/CycloneDX/cyclonedx-node-module/pull/359
+
 ## 4.0.3 - 2022-12-16
 
 * Docs
-  * fix CI/CT shield ([badges/shields#8671] via [#346])
+  * Fix CI/CT shield ([badges/shields#8671] via [#346])
 
 [badges/shields#8671]: https://github.com/badges/shields/issues/8671
 [#346]: https://github.com/CycloneDX/cyclonedx-node-module/pull/346
