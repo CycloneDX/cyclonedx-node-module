@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## unreleased
 
+<!-- any unreleased change goes here -->
+
 ## 4.0.4 - 2024-03-28
 
 * Docs
