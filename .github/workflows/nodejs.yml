@@ -33,6 +33,7 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
+          - "22"
           - "20"      # Current
           - "18"      # Active LTS
           - "16"
@@ -46,6 +47,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      # Temporary workaround for Node.js v22 on Windows
+      - if: matrix.node-version == '22' && runner.os == 'Windows'
+        shell: bash  # Not pwsh!!!
+        run: |
+          npm --version  # 10.5.1
+          npm install -g npm  # >= https://github.com/npm/cli/releases/tag/v10.7.0
+          npm --version  # 10.7.0 
       - name: install project
         run: >
           npm install
