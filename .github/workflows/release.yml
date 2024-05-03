@@ -30,7 +30,7 @@ on:
 
 env:
   # https://nodejs.dev/en/about/releases/
-  NODE_ACTIVE_LTS: "18"
+  NODE_ACTIVE_LTS: "20"
 
 jobs:
   bump:

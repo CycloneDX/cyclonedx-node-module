@@ -16,6 +16,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  # https://nodejs.dev/en/about/releases/
+  NODE_ACTIVE_LTS: "20"
+
 ## As this project is a meta-package, there are no functionalities nor tests.
 ## So the only responsibility that must be assured is: this project can be installed under all circumstances.
 jobs:
@@ -33,8 +37,9 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "20"      # Current
-          - "18"      # Active LTS
+          - "22"      # Current
+          - "20"      # Active LTS
+          - "18"
           - "16"
           - "14"
     steps:
@@ -67,8 +72,9 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "20"      # Current
-          - "18"      # Active LTS
+          - "22"      # Current
+          - "20"      # Active LTS
+          - "18"
           - "16"
           - "14"
     steps:
@@ -92,15 +98,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: 
+        os:
          - ubuntu-latest
          - windows-latest
-         - macos-13  # macos-latest has issues with node14
+         - macos-latest
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "20"      # Current
-          - "18"      # Active LTS
+          - "22"      # Current
+          - "20"      # Active LTS
+          - "18"
         pnpm-version: [ "latest" ]
         include:
           - os: "ubuntu-latest"
