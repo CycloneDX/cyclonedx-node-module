@@ -41,6 +41,8 @@ These systems are out of scope. Therefore, the following tools are not part of t
 | _React_ | [@cyclonedx/webpack-plugin with React](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
 | _Svelte_ | To be announced, suggestions welcome |
 | _Parcel_ | To be announced, suggestions welcome |
+| _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme) |
+| _Vite_ | [rollup-plugin-sbom with Vite](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 
 ## Library
