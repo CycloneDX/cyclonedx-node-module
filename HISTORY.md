@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+* Docs
+  * Acknowledge tools for _Rollup_, _Vite_ (via [#363])
+
+[#363]: https://github.com/CycloneDX/cyclonedx-node-module/pull/363
+
 ## 4.0.4 - 2024-03-28
 
 * Docs
