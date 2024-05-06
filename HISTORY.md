@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+## 4.0.5 - 2024-05-06
+
 * Docs
   * Acknowledge tools for _Rollup_, _Vite_ (via [#363])
 
