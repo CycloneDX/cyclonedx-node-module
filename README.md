@@ -33,17 +33,17 @@ There are systems, that are not node-targeting, but use node as a runtime/compil
 These systems are out of scope. Therefore, the following tools are not part of this very meta-package.
 
 | system | actual tool(s) |
-|:------:|:------------|
-| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
-| _esbuild_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-esbuild-plugin](https://github.com/CycloneDX/cyclonedx-esbuild-plugin) |
-| _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
-| _Angular_ | [@cyclonedx/webpack-plugin with Angular](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
-| _React_ | [@cyclonedx/webpack-plugin with React](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
-| _Svelte_ | To be announced, suggestions welcome |
-| _Parcel_ | To be announced, suggestions welcome |
-| _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme) |
-| _Vite_ | [rollup-plugin-sbom with Vite](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
+|:------:|:---------------|
+| _Angular_ | [@cyclonedx/webpack-plugin with _Angular_](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
+| _esbuild_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-esbuild-plugin](https://github.com/CycloneDX/cyclonedx-esbuild-plugin) |
+| _Parcel_ | To be announced, suggestions welcome |
+| _React_ | [@cyclonedx/webpack-plugin with _React_](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
+| _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme) |
+| _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
+| _Svelte_ | To be announced, suggestions welcome |
+| _Vite_ | [rollup-plugin-sbom with _Vite_](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
+| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
 
 ## Library
 
