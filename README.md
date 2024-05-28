@@ -18,14 +18,9 @@ generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _nod
 |:---------:|:------------|
 | _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
 | _pnpm_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
+| _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx) |
 
 *) You should not depend on this very meta-package, instead depend on the actual tool that fits your specific (eco)system.
-
-In addition, there are some tools to mention, that are not installable as a dependency (yet) but require other/manual methods of installation.
-
-| ecosystem | actual tool |
-|:---------:|:------------|
-| _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx) |
 
 ## Out of Scope
 
