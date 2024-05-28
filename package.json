@@ -13,6 +13,7 @@
   },
   "copyright": "Copyright OWASP Foundation",
   "optionalDependencies": {
-    "@cyclonedx/cyclonedx-npm": "*"
+    "@cyclonedx/cyclonedx-npm": "*",
+    "@cyclonedx/yarn-plugin-cyclonedx": "*"
   }
 }

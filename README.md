@@ -16,7 +16,7 @@ generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _nod
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/@cyclonedx/cyclonedx-npm) |
+| _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
 | _pnpm_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
 
 *) You should not depend on this very meta-package, instead depend on the actual tool that fits your specific (eco)system.
@@ -25,7 +25,7 @@ In addition, there are some tools to mention, that are not installable as a depe
 
 | ecosystem | actual tool |
 |:---------:|:------------|
-| _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://github.com/CycloneDX/cyclonedx-node-yarn#readme) |
+| _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx) |
 
 ## Out of Scope
 
@@ -34,21 +34,21 @@ These systems are out of scope. Therefore, the following tools are not part of t
 
 | system | actual tool(s) |
 |:------:|:---------------|
-| _Angular_ | [@cyclonedx/webpack-plugin with _Angular_](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
+| _Angular_ | [@cyclonedx/webpack-plugin with _Angular_](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-angular) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 | _esbuild_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-esbuild-plugin](https://github.com/CycloneDX/cyclonedx-esbuild-plugin) |
 | _Parcel_ | To be announced, suggestions welcome |
-| _React_ | [@cyclonedx/webpack-plugin with _React_](https://www.npmjs.com/package/@cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
+| _React_ | [@cyclonedx/webpack-plugin with _React_](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#user-content-use-with-react) |
 | _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme) |
 | _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Svelte_ | To be announced, suggestions welcome |
 | _Vite_ | [rollup-plugin-sbom with _Vite_](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
-| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/@cyclonedx/webpack-plugin) |
+| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
 
 ## Library
 
 If you are looking for a JavaScript/TypeScript library for working with CycloneDX, its data models or serialization,
-then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/@cyclonedx/cyclonedx-library).
+then you might want to try [@cyclonedx/cyclonedx-library](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-library).
 
 ## Contributing
 
