@@ -78,7 +78,7 @@ and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/release
 [contributing_file]: https://github.com/CycloneDX/cyclonedx-node-module/blob/master/CONTRIBUTING.md
 
 [shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-node-module/nodejs.yml?branch=master&logo=GitHub&logoColor=white "build"
-[shield_npm-version]: https://img.shields.io/npm/v/@cyclonedx/bom?logo=npm&logoColor=white "npm"
+[shield_npm-version]: https://img.shields.io/npm/v/%40cyclonedx%2fbom/latest?label=npm&logo=npm&logoColor=white "npm"
 [shield_docker-version]: https://img.shields.io/docker/v/cyclonedx/cyclonedx-node?logo=docker&logoColor=white&label=docker "docker"
 [shield_license]: https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg?logo=open%20source%20initiative&logoColor=white "license"
 [shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg "homepage"
@@ -86,7 +86,7 @@ and [github releases](https://github.com/CycloneDX/cyclonedx-node-module/release
 [shield_groups]: https://img.shields.io/badge/discussion-groups.io-blue.svg "groups discussion"
 [shield_twitter-follow]: https://img.shields.io/badge/Twitter-follow-blue?logo=Twitter&logoColor=white "twitter follow"
 [link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-node-module/actions/workflows/nodejs.yml?query=branch%3Amaster
-[link_npm]: https://www.npmjs.com/package/@cyclonedx/bom
+[link_npm]: https://www.npmjs.com/package/%40cyclonedx/bom
 [link_docker]: https://hub.docker.com/r/cyclonedx/cyclonedx-node
 [link_website]: https://cyclonedx.org/
 [link_slack]: https://cyclonedx.org/slack/invite
