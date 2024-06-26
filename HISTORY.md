@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+## 4.1.0 - 2024-06-26
+
+* Added
+  * New optional dependency _@cyclonedx/yarn-plugin-cyclonedx_ (via [#365])
+    This is a package for generating SBOM from _yarn_ projects.
+
+[#365]: https://github.com/CycloneDX/cyclonedx-node-module/pull/365
+
 ## 4.0.5 - 2024-05-06
 
 * Docs
