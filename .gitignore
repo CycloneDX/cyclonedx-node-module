@@ -1,8 +1,14 @@
 ## this is a meta-package - we dont lock
 /package-lock.json
-/.yarn
 /yarn.lock
 /pnpm-lock.yaml
+
+## pm rc
+.npmrc
+.yarnrc
+.yarnrc.yml
+pnpm-workspace.yaml
+.pnpmfile.cjs
 
 
 ## target of JSDoc
@@ -148,6 +154,7 @@ dist
 .vscode-test
 
 # yarn v2
+.yarn
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
