@@ -1,3 +1,5 @@
+# CycloneDX BOM
+
 [![shield_npm-version]][link_npm]
 [![shield_gh-workflow-test]][link_gh-workflow-test]
 [![shield_license]][license_file]  
@@ -7,8 +9,6 @@
 [![shield_twitter-follow]][link_twitter]
 
 ----
-
-# CycloneDX BOM
 
 This is a so-called **meta-package**, it does not ship any own functionality, but it is a collection of optional dependencies.
 This package's dependencies are tools* with one purpose in common:  
