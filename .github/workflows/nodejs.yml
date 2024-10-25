@@ -5,12 +5,13 @@ name: Node CIf
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main", "master", "next" ]
+    tags: [ "v*" ]
   pull_request:
   workflow_dispatch:
   schedule:
-    - # test every sunday, if the setup still works
-      cron:  '20 4 * * SUN'
+    - # test every night, if the setup still works
+      cron:  '42 23 * * *'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
