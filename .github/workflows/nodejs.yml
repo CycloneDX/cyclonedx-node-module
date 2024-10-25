@@ -10,7 +10,8 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - # test every night, if the setup still works
+    - # dependencies are intended to be not pinned
+      # test every night, if the setup still works
       cron:  '42 23 * * *'
 
 concurrency:
