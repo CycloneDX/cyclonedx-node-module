@@ -20,7 +20,7 @@ concurrency:
 
 env:
   # https://nodejs.dev/en/about/releases/
-  NODE_ACTIVE_LTS: "20"
+  NODE_ACTIVE_LTS: "22"
 
 ## As this project is a meta-package, there are no functionalities nor tests.
 ## So the only responsibility that must be assured is: this project can be installed under all circumstances.
@@ -39,8 +39,9 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "22"      # Current
-          - "20"      # Active LTS
+          - "24"      # Current
+          - "22"      # Active LTS
+          - "20"      # Maintenance
           - "18"
           - "16"
           - "14"
@@ -74,8 +75,9 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "22"      # Current
-          - "20"      # Active LTS
+          - "24"      # Current
+          - "22"      # Active LTS
+          - "20"      # Maintenance
           - "18"
           - "16"
           - "14"
@@ -107,8 +109,9 @@ jobs:
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "22"      # Current
-          - "20"      # Active LTS
+          - "24"      # Current
+          - "22"      # Active LTS
+          - "20"      # Maintenance
           - "18"
         pnpm-version: [ "latest" ]
         include:
