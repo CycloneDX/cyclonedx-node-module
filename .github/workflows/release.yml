@@ -120,3 +120,4 @@ jobs:
           tag_name:   ${{ needs.bump.outputs.version }}
           name:       ${{ needs.bump.outputs.version_plain }}
           prerelease: ${{ github.event.inputs.prerelease }}
+          target_commitish: ${{ github.head_ref || github.ref_name }}
