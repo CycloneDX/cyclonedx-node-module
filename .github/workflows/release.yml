@@ -28,6 +28,8 @@ on:
         default: false
         required: false
 
+permissions: {}
+
 env:
   # https://nodejs.dev/en/about/releases/
   NODE_ACTIVE_LTS: "22"
@@ -41,6 +43,8 @@ jobs:
       version_plain: ${{ steps.bump.outputs.version_plain }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write  # needed for git push
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -73,6 +77,7 @@ jobs:
           NPMV_PREID: ${{ github.event.inputs.preid }}
       - name: git push back
         run: git push --follow-tags
+
   publish-NPMJS:
     needs:
       - "bump"
@@ -102,6 +107,7 @@ jobs:
       - name: publish to NPMJS as "unstable-prerelease"
         if: ${{ github.event.inputs.prerelease == 'true' }}
         run: npm publish --provenance --access public --tag 'unstable-prerelease'
+
   release-GH:
     needs:
       - "bump"
@@ -109,6 +115,8 @@ jobs:
     name: publish GitHub
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write  # create a release
     steps:
       - name: Create Release
         id: release
