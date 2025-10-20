@@ -53,9 +53,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          package-manager-cache: false  # must not usecaches. we want the latest, always
       - name: install project
         run: >
           npm install
@@ -89,9 +90,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          package-manager-cache: false  # must not usecaches. we want the latest, always
       - name: install project
         run: > 
           yarn install
@@ -129,9 +131,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
+          package-manager-cache: false  # must not usecaches. we want the latest, always
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
         uses: pnpm/action-setup@v4.2.0
