@@ -29,15 +29,15 @@ These systems are out of scope. Therefore, the following tools are not part of t
 
 | system | actual tool(s) |
 |:------:|:---------------|
-| _Angular_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-angular) or [@cyclonedx/webpack-plugin with _Angular_](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-angular) |
+| _Angular_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-angular) or [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-angular) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 | _esbuild_ | [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-esbuild) |
 | _Parcel_ | To be announced, suggestions welcome |
-| _React_ | [@cyclonedx/webpack-plugin with _React_](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-react) |
+| _React_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-react) |
 | _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom) |
 | _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Svelte_ | To be announced, suggestions welcome |
-| _Vite_ | Utilize [rollup-plugin-sbom with _Vite_](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
+| _Vite_ | Utilize [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
 | _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
 
 ## Library
