@@ -33,7 +33,7 @@ These systems are out of scope. Therefore, the following tools are not part of t
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 | _esbuild_ | [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-esbuild) |
 | _Parcel_ | To be announced, suggestions welcome |
-| _React_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-react) |
+| _React_ | Utilize [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-react) |
 | _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom) |
 | _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Svelte_ | To be announced, suggestions welcome |
