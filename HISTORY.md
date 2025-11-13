@@ -6,6 +6,18 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+
+## 4.1.3 - 2024-11-15
+
+* Docs
+  * Acknowledge tools for _esbuild_ (via [#373])
+
+[#373]: https://github.com/CycloneDX/cyclonedx-node-module/pull/373
+
+## 4.1.2 - 2024-09-15
+
+Maintenance release.
+
 ## 4.1.0 - 2024-06-26
 
 * Added
