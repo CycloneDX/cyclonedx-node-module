@@ -32,7 +32,7 @@ permissions: {}
 
 env:
   # https://nodejs.dev/en/about/releases/
-  NODE_ACTIVE_LTS: "22"
+  NODE_ACTIVE_LTS: "24"
 
 jobs:
   bump:

@@ -22,7 +22,7 @@ permissions: {}
 
 env:
   # https://nodejs.dev/en/about/releases/
-  NODE_ACTIVE_LTS: "22"
+  NODE_ACTIVE_LTS: "24"
 
 ## As this project is a meta-package, there are no functionalities nor tests.
 ## So the only responsibility that must be assured is: this project can be installed under all circumstances.
@@ -35,18 +35,22 @@ jobs:
       fail-fast: false
       matrix:
         os:
-         - ubuntu-latest
-         - windows-latest
-         - macos-13  # macos-latest has issues with node14
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "23"      # Current
-          - "22"      # Active LTS
-          - "20"      # Maintenance
+          - "25"      # Current
+          - "24"      # Active LTS
+          - "22"
+          - "20"
           - "18"
           - "16"
           - "14"
+        exclude:
+          - os: macos-latest # macos-latest has issues with node14
+            node-version: "14"
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
@@ -72,18 +76,22 @@ jobs:
       fail-fast: false
       matrix:
         os:
-         - ubuntu-latest
-         - windows-latest
-         - macos-13  # macos-latest has issues with node14
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "23"      # Current
-          - "22"      # Active LTS
-          - "20"      # Maintenance
+          - "25"      # Current
+          - "24"      # Active LTS
+          - "22"
+          - "20"
           - "18"
           - "16"
           - "14"
+        exclude:
+          - os: macos-latest # macos-latest has issues with node14
+            node-version: "14"
     steps:
       - name: Checkout
         ## see https://github.com/actions/checkout
@@ -107,15 +115,16 @@ jobs:
       fail-fast: false
       matrix:
         os:
-         - ubuntu-latest
-         - windows-latest
-         - macos-latest
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
         node-version:
           # action based on https://github.com/actions/node-versions/releases
           # see also: https://nodejs.org/en/about/releases/
-          - "23"      # Current
-          - "22"      # Active LTS
-          - "20"      # Maintenance
+          - "25"      # Current
+          - "24"      # Active LTS
+          - "22"
+          - "20"
           - "18"
         pnpm-version: [ "latest" ]
         include:
