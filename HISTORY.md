@@ -6,6 +6,9 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+* Docs
+    * Acknowledge tools for _bun_ (via [#])
+[#]: 
 
 ## 4.1.3 - 2024-11-15
 
