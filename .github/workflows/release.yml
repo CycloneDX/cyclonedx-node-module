@@ -1,6 +1,7 @@
 # docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
 
 name: Release
+run-name: Release ${{ inputs.newversion }} ${{ inputs.prerelease == 'true' && '(prerelease)' || '' }}
 
 on:
   workflow_dispatch:
@@ -23,7 +24,7 @@ on:
         default: rc
         required: false
       prerelease:
-        description: "This a pre-release"
+        description: "This is a pre-release"
         type: boolean
         default: false
         required: false
@@ -31,8 +32,7 @@ on:
 permissions: {}
 
 env:
-  # https://nodejs.dev/en/about/releases/
-  NODE_ACTIVE_LTS: "24"
+  NODE_ACTIVE_LTS: "24"  # https://nodejs.org/en/about/releases/
 
 jobs:
   bump:
@@ -60,6 +60,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
+      ## ! no npm build at the moment
       - name: bump VERSION
         id: bump
         run: |
@@ -82,10 +84,12 @@ jobs:
     needs:
       - "bump"
     name: publish NPMJS
-    permissions:
-      id-token: write
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      id-token: write  # Enables provenance signing via OIDC
+    env:
+      NPMJS_RELEASE_TAG: ${{ github.event.inputs.prerelease == 'true' && 'unstable-prerelease' || 'latest' }}
     steps:
       - name: Checkout code
         # see https://github.com/actions/checkout
@@ -97,16 +101,29 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ env.NODE_ACTIVE_LTS }}
+          package-manager-cache: false
+      # no explicit npm build. if a build is required, it should be configured as prepublish/prepublishOnly script of npm.
       - name: login to NPMJS
         run: npm config set "//registry.npmjs.org/:_authToken=$NPMJS_AUTH_TOKEN"
         env:
           NPMJS_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: publish to NPMJS as "latest"
-        if: ${{ github.event.inputs.prerelease != 'true' }}
-        run: npm publish --provenance --access public --tag 'latest'
-      - name: publish to NPMJS as "unstable-prerelease"
-        if: ${{ github.event.inputs.prerelease == 'true' }}
-        run: npm publish --provenance --access public --tag 'unstable-prerelease'
+      - name: publish to NPMJS as "${{ env.NPMJS_RELEASE_TAG }}"
+        run: >
+          npm publish
+          --provenance
+          --access public
+          --tag "$NPMJS_RELEASE_TAG"
+      - name: pack release result
+        run: |
+          mkdir -p "$PACKED_DIR"
+          npm pack --pack-destination "$PACKED_DIR"
+      - name: artifact release result
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ env.PACKED_ARTIFACT }}
+          path: ${{ env.PACKED_DIR }}/
+          if-no-files-found: error
 
   release-GH:
     needs:
