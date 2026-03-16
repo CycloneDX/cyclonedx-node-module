@@ -17,7 +17,7 @@ generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _nod
 | ecosystem | actual tool |
 |:---------:|:------------|
 | _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
-| _pnpm_ | To be announced, suggestions welcome. <br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
+| _pnpm_ | To be announced, suggestions welcome.<br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
 | _yarn_ | [@cyclonedx/yarn-plugin-cyclonedx](https://www.npmjs.com/package/%40cyclonedx/yarn-plugin-cyclonedx) |
 
 *) You should not depend on this very meta-package, instead depend on the actual tool that fits your specific (eco)system.
@@ -27,19 +27,19 @@ generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _nod
 There are systems, that are not node-targeting, but use node as a runtime/compiler environment, or use node package registry as a distribution system.
 These systems are out of scope. Therefore, the following tools are not part of this very meta-package.
 
-| system | actual tool(s) |
+| System | Actual tool(s) |
 |:------:|:---------------|
 | _Angular_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-angular) or [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-angular) |
 | _Bun_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#plugin-example-esbuild) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
-| _esbuild_ | [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-esbuild) |
+| _Esbuild_ | [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-esbuild) |
 | _Parcel_ | To be announced, suggestions welcome |
 | _React_ | Utilize [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-react) |
 | _Rollup_ | [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom) |
 | _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Svelte_ | To be announced, suggestions welcome |
 | _Vite_ | Utilize [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
-| _webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
+| _Webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
 
 ## Library
 
