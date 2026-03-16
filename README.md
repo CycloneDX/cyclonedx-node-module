@@ -14,7 +14,7 @@ This is a so-called **meta-package**, it does not ship any own functionality, bu
 This package's dependencies are tools* with one purpose in common:  
 generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _node_-based projects.
 
-| ecosystem | actual tool |
+| Ecosystem | Actual Tool |
 |:---------:|:------------|
 | _npm_ | [@cyclonedx/cyclonedx-npm](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-npm) |
 | _pnpm_ | To be announced, suggestions welcome.<br/> Candidate: [cyclonedx-node-pnpm](https://github.com/CycloneDX/cyclonedx-node-pnpm) |
@@ -27,7 +27,7 @@ generate _[CycloneDX][link_website]_ Software-Bill-of-Materials (SBOM) from _nod
 There are systems, that are not node-targeting, but use node as a runtime/compiler environment, or use node package registry as a distribution system.
 These systems are out of scope. Therefore, the following tools are not part of this very meta-package.
 
-| System | Actual tool(s) |
+| System | Actual Tool(s) |
 |:------:|:---------------|
 | _Angular_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-angular) or [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-angular) |
 | _Bun_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#plugin-example-esbuild) |
