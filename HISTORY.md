@@ -9,8 +9,8 @@ All notable changes to this project will be documented in this file.
 ## 4.1.4 - 2026-03-16
 
 * Docs
-  * Acknowledge tools for _Bun_ (via [#376/])
-[#376/]: https://github.com/CycloneDX/cyclonedx-node-module/pull/376/
+  * Acknowledge tools for _Bun_ (via [#376])
+[#376]: https://github.com/CycloneDX/cyclonedx-node-module/pull/376
 
 ## 4.1.3 - 2025-11-13
 
