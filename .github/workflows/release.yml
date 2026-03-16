@@ -109,17 +109,6 @@ jobs:
           --provenance
           --access public
           --tag "$NPMJS_RELEASE_TAG"
-      - name: pack release result
-        run: |
-          mkdir -p "$PACKED_DIR"
-          npm pack --pack-destination "$PACKED_DIR"
-      - name: artifact release result
-        # see https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v6
-        with:
-          name: ${{ env.PACKED_ARTIFACT }}
-          path: ${{ env.PACKED_DIR }}/
-          if-no-files-found: error
 
   release-GH:
     needs:
