@@ -30,7 +30,7 @@ These systems are out of scope. Therefore, the following tools are not part of t
 | system | actual tool(s) |
 |:------:|:---------------|
 | _Angular_ | Utilize [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-angular) or [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-angular) |
-| _bun_ | Utilize [@cyclonedx/`cyclonedx-esbuild`](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#use-with-bun) |
+| _Bun_ | Utilize [@cyclonedx/`cyclonedx-esbuild`](https://www.npmjs.com/package/@cyclonedx/cyclonedx-esbuild?activeTab=readme#plugin-example-esbuild) |
 | _Bower_ | None. (_Bower_ is [deprecated](https://bower.io/blog/2017/how-to-migrate-away-from-bower/)!) |
 | _esbuild_ | [@cyclonedx/cyclonedx-esbuild](https://www.npmjs.com/package/%40cyclonedx/cyclonedx-esbuild) |
 | _Parcel_ | To be announced, suggestions welcome |
