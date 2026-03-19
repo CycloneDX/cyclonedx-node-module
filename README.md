@@ -39,7 +39,7 @@ These systems are out of scope. Therefore, the following tools are not part of t
 | _Rspack_/_Rsbuild_ | To be announced, suggestions welcome |
 | _Svelte_ | To be announced, suggestions welcome |
 | _Vite_ | Utilize [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) |
-| _Vue_ | Utilize [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-vue) | 
+| _Vue_ | Utilize [rollup-plugin-sbom](https://www.npmjs.com/package/rollup-plugin-sbom?activeTab=readme#usage-with-vite) or [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin?activeTab=readme#use-with-vue) | 
 | _Webpack_ | [@cyclonedx/webpack-plugin](https://www.npmjs.com/package/%40cyclonedx/webpack-plugin) |
 
 ## Library
