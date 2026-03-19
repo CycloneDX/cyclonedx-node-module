@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+## 4.1.5 - 2026-03-19
+
+* Docs
+  * Acknowledge tools for _Vue_ (via [#381])
+
+[#381]: https://github.com/CycloneDX/cyclonedx-node-module/pull/381
+
 ## 4.1.4 - 2026-03-16
 
 * Docs
