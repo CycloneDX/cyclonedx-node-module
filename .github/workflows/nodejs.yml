@@ -146,7 +146,7 @@ jobs:
           package-manager-cache: false  # must not usecaches. we want the latest, always
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
-        uses: pnpm/action-setup@v4.4.0
+        uses: pnpm/action-setup@v6.0.0
         with:
           version: ${{ matrix.pnpm-version }}
       - name: install project
