@@ -54,10 +54,10 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
@@ -95,10 +95,10 @@ jobs:
     steps:
       - name: Checkout
         ## see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
@@ -137,16 +137,16 @@ jobs:
     steps:
       - name: Checkout
         # see https://github.com/actions/checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Setup Node.js ${{ matrix.node-version }}
         # see https://github.com/actions/setup-node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
-        uses: pnpm/action-setup@v4.4.0
+        uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
         with:
           version: ${{ matrix.pnpm-version }}
       - name: install project
