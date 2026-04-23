@@ -36,4 +36,4 @@ Resolves or fixes issue: <!-- ✍️ Add GitHub issue number in format `#0000` o
 
 ### Affirmation
 
-- [ ] My code follows the [CONTRIBUTING.md](https://github.com/CycloneDX/cyclonedx-python/blob/main/CONTRIBUTING.md) guidelines
+- [ ] My code follows the [CONTRIBUTING.md](https://github.com/CycloneDX/cyclonedx-node-module/blob/master/CONTRIBUTING.md) guidelines
