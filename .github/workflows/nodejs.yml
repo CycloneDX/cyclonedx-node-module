@@ -130,6 +130,14 @@ jobs:
         include:
           - os: "ubuntu-latest"
             node-version: "16"
+          - os: "ubuntu-latest"
+            node-version: "24"
+            pnpm-version: "latest-10"
+          - os: "ubuntu-latest"
+            node-version: "24"
+            pnpm-version: "latest-9"
+          - os: "ubuntu-latest"
+            node-version: "16"
             pnpm-version: "latest-8"  # see https://www.npmjs.com/package/pnpm/?activeTab=versions
           - os: "ubuntu-latest"
             node-version: "14"
@@ -150,6 +158,9 @@ jobs:
         with:
           version: ${{ matrix.pnpm-version }}
       - name: install project
+        if: >
+          ${{ matrix.pnpm-version == 'latest' 
+          || matrix.pnpm-version == 'latest-11' }}
         run: >
           pnpm approve-builds
           libxmljs2
