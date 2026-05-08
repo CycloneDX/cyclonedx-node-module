@@ -151,6 +151,10 @@ jobs:
           version: ${{ matrix.pnpm-version }}
       - name: install project
         run: >
+          pnpm approve-builds
+          libxmljs2
+      - name: install project
+        run: >
           pnpm install
           --no-lockfile
           --verbose
