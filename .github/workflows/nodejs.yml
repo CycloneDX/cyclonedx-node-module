@@ -160,7 +160,8 @@ jobs:
       - name: install project
         if: >
           ${{ matrix.pnpm-version == 'latest' 
-          || matrix.pnpm-version == 'latest-11' }}
+          ||  matrix.pnpm-version == 'latest-11'
+          }}
         run: >
           pnpm approve-builds
           libxmljs2
