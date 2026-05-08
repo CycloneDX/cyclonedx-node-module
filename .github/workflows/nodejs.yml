@@ -124,10 +124,14 @@ jobs:
           - "25"      # Current
           - "24"      # Active LTS
           - "22"
-          - "20"
-          - "18"
         pnpm-version: [ "latest" ]
         include:
+          - os: "ubuntu-latest"
+            node-version: "20"
+            pnpm-version: "latest-10" # see https://github.com/pnpm/pnpm/issues/11546#issuecomment-4407057536
+          - os: "ubuntu-latest"
+            node-version: "18"
+            pnpm-version: "latest-9"  # see https://github.com/pnpm/pnpm/issues/11546#issuecomment-4407057536
           - os: "ubuntu-latest"
             node-version: "16"
             pnpm-version: "latest-8"  # see https://www.npmjs.com/package/pnpm/?activeTab=versions

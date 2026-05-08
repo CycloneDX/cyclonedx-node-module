@@ -1,0 +1,8 @@
+packages:
+  - .
+
+# see https://pnpm.io/settings#allowbuilds
+onlyBuiltDependencies:  # pnpm10
+  - electron
+allowBuilds:  # pnpm11+
+  libxmljs2: true
