@@ -157,6 +157,7 @@ jobs:
         if: >
           ${{ matrix.pnpm-version == 'latest' 
           ||  matrix.pnpm-version == 'latest-11'
+          ||  matrix.pnpm-version == 'latest-10'
           }}
         run: >
           pnpm approve-builds
