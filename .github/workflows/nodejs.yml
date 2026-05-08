@@ -129,8 +129,6 @@ jobs:
         pnpm-version: [ "latest" ]
         include:
           - os: "ubuntu-latest"
-            node-version: "16"
-          - os: "ubuntu-latest"
             node-version: "24"
             pnpm-version: "latest-10"
           - os: "ubuntu-latest"
