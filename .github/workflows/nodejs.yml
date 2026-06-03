@@ -120,27 +120,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
-      - name: Remove Yarn 1 from PATH (Windows)
-        if: ${{ runner.os == 'Windows' }}
-        shell: pwsh
-        run: |
-          Set-PSDebug -Trace 1
-          # find yarn
-          Get-Alias yarn -ErrorAction SilentlyContinue
-          Get-ChildItem Function:\yarn -ErrorAction SilentlyContinue
-          Get-Command yarn
-          # remove yarn
-          Remove-Item Alias:\yarn -Verbose -ErrorAction SilentlyContinue
-          Remove-Item Function:\yarn -Verbose -ErrorAction SilentlyContinue
-          Remove-Item "C:\npm\prefix\yarn*" -Verbose -Force -ErrorAction SilentlyContinue
-          # verify
-          Get-Alias yarn -ErrorAction SilentlyContinue
-          Get-ChildItem Function:\yarn -ErrorAction SilentlyContinue
-          Get-Command yarn -ErrorAction SilentlyContinue
       - name: enable yarn
         shell: bash
         run: |
           set -eux
+          npm uninstall -g yarn
           corepack enable yarn
           case "$NODE_VERSION" in
             '14')
