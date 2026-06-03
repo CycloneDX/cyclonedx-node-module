@@ -52,6 +52,8 @@ jobs:
           - os: macos-latest # macos-latest has issues with node14
             node-version: "14"
     steps:
+      - name: test npm
+        run: npm --version
       - name: Checkout
         # see https://github.com/actions/checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -102,6 +104,29 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
+      - name: Remove Yarn 1 from PATH (Windows)
+        if: ${{ runner.os == 'Windows' }}
+        shell: pwsh
+        run: |
+          Set-PSDebug -Trace 1
+          # find yarn
+          Get-Alias yarn -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\yarn -ErrorAction SilentlyContinue
+          Get-Command yarn
+          # remove yarn
+          Remove-Item Alias:\yarn -Verbose -ErrorAction SilentlyContinue
+          Remove-Item Function:\yarn -Verbose -ErrorAction SilentlyContinue
+          Remove-Item "C:\npm\prefix\yarn*" -Verbose -Force -ErrorAction SilentlyContinue
+          # verify
+          Get-Alias yarn -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\yarn -ErrorAction SilentlyContinue
+          Get-Command yarn -ErrorAction SilentlyContinue
+      - name: enable yarn
+        run: |-
+          corepack enable yarn
+          corepack prepare yarn@latest --activate
+          yarn --version
+        working-directory: ..  # prevent evaluation of package.json
       - name: install project
         run: > 
           yarn install
@@ -148,11 +173,30 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
+      - name: Remove PNPM from PATH (Windows)
+        if: ${{ runner.os == 'Windows' }}
+        shell: pwsh
+        run: |
+          Set-PSDebug -Trace 1
+          # find pnpm
+          Get-Alias pnpm -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\pnpm -ErrorAction SilentlyContinue
+          Get-Command pnpm -ErrorAction SilentlyContinue
+          # remove pnpm
+          Remove-Item Alias:\pnpm -Verbose -ErrorAction SilentlyContinue
+          Remove-Item Function:\pnpm -Verbose -ErrorAction SilentlyContinue
+          Remove-Item "C:\npm\prefix\pnpm*" -Verbose -Force -ErrorAction SilentlyContinue
+          # verify
+          Get-Alias pnpm -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\pnpm -ErrorAction SilentlyContinue
+          Get-Command pnpm -ErrorAction SilentlyContinue
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
         uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
         with:
           version: ${{ matrix.pnpm-version }}
+      - name: test pnpm
+        run: pnpm --version
       - name: install project
         run: >
           pnpm install
