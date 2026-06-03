@@ -61,6 +61,24 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
+      - name: bump npm
+        shell: bash
+        env:
+          NODE_VERSION: '${{ matrix.node-version }}'
+        run: |
+          set -eux
+          case "$NODE_VERSION" in
+            '26' )
+              npm install -g npm@latest
+              ;;
+            '24')
+              npm i -g npm@^11
+              ;;
+            '20' | '20.18.0')
+              npm i -g npm@^10
+              ;;
+          esac
+          npm --version
       - name: install project
         run: >
           npm install
@@ -102,9 +120,38 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
+      - name: Setup Yarn
+        shell: bash
+        run: |
+          set -eux
+          npm uninstall -g yarn
+          corepack enable yarn
+          case "$NODE_VERSION" in
+            '14' | '16')
+              corepack prepare --activate yarn@3.8.7
+              ;;
+            '18')
+              corepack prepare --activate yarn@4.0.0
+              ;;
+            *)
+              corepack install --global yarn@stable
+              ;;
+          esac
+          yarn --version
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        working-directory: ..  # prevent evaluation of package.json
       - name: install project
-        run: > 
-          yarn install
+        shell: bash
+        run: |
+          set -eux
+          YARN_VERSION=$(yarn --version)
+          YARN_MAJOR=${YARN_VERSION%%.*}
+          if [ "$YARN_MAJOR" -ge 4 ]; then
+            export YARN_ENABLE_HARDENED_MODE=0
+          fi
+          yarn install \
+          --no-immutable \
           --inline-builds
       # proven: the package can be installed. that's enough for a meta-package
   test-pnpm-install:
@@ -148,11 +195,30 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
+      - name: Remove PNPM from PATH (Windows)
+        if: ${{ runner.os == 'Windows' }}
+        shell: pwsh
+        run: |
+          Set-PSDebug -Trace 1
+          # find pnpm
+          Get-Alias pnpm -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\pnpm -ErrorAction SilentlyContinue
+          Get-Command pnpm -ErrorAction SilentlyContinue
+          # remove pnpm
+          Remove-Item Alias:\pnpm -Verbose -ErrorAction SilentlyContinue
+          Remove-Item Function:\pnpm -Verbose -ErrorAction SilentlyContinue
+          Remove-Item "C:\npm\prefix\pnpm*" -Verbose -Force -ErrorAction SilentlyContinue
+          # verify
+          Get-Alias pnpm -ErrorAction SilentlyContinue
+          Get-ChildItem Function:\pnpm -ErrorAction SilentlyContinue
+          Get-Command pnpm -ErrorAction SilentlyContinue
       - name: setup pnpm
         ## see https://github.com/pnpm/action-setup
         uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v4.4.0
         with:
           version: ${{ matrix.pnpm-version }}
+      - name: test pnpm
+        run: pnpm --version
       - name: install project
         run: >
           pnpm install
