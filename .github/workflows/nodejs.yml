@@ -129,6 +129,9 @@ jobs:
           corepack install --global yarn@stable || corepack prepare --activate yarn@stable
           yarn --version
         working-directory: ..  # prevent evaluation of package.json
+      - name: create dummy lock
+        shell: bash
+        run: echo  > yarn.lock
       - name: install project
         run: > 
           yarn install
