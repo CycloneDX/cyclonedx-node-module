@@ -126,7 +126,7 @@ jobs:
         run: |-
           set -x
           corepack enable yarn
-          corepack install --global yarn@stable || corepack prepare --activate yarn@stable
+          corepack install --global yarn@stable || corepack prepare --activate yarn
           yarn --version
         working-directory: ..  # prevent evaluation of package.json
       - name: create dummy lock
