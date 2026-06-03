@@ -150,7 +150,7 @@ jobs:
           if [ "$YARN_MAJOR" -ge 4 ]; then
             export YARN_ENABLE_HARDENED_MODE=0
           fi
-          yarn install
+          yarn install --immutable
       # proven: the package can be installed. that's enough for a meta-package
   test-pnpm-install:
     name: PNPM install (node${{ matrix.node-version }}, ${{ matrix.os }})
