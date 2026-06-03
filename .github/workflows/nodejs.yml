@@ -61,12 +61,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
-
       - name: bump npm
         shell: bash
         env:
           NODE_VERSION: '${{ matrix.node-version }}'
-        run:
+        run: |
           case "$NODE_VERSION" in
           '26' )
           npm install -g npm@latest
