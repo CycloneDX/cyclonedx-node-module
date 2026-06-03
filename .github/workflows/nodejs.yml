@@ -144,10 +144,10 @@ jobs:
           corepack enable yarn
           case "$NODE_VERSION" in
             '14')
-              corepack prepare --activate yarn@3
+              corepack prepare --activate yarn@3.8.7
               ;;
             '16')
-              corepack prepare --activate yarn@4
+              corepack prepare --activate yarn@4.0.0
               ;;
             *)
               corepack install --global yarn@stable
