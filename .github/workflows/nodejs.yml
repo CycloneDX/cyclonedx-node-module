@@ -132,6 +132,8 @@ jobs:
           yarn install
           --immutable
           --inline-builds
+        env:
+          YARN_ENABLE_HARDENED_MODE: "0"
       # proven: the package can be installed. that's enough for a meta-package
   test-pnpm-install:
     name: PNPM install (node${{ matrix.node-version }}, ${{ matrix.os }})
