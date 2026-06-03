@@ -124,7 +124,7 @@ jobs:
       - name: enable yarn
         run: |-
           corepack enable yarn
-          corepack prepare yarn@latest --activate
+          corepack prepare yarn --activate
           yarn --version
         working-directory: ..  # prevent evaluation of package.json
       - name: install project
