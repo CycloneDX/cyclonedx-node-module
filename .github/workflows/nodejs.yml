@@ -122,9 +122,11 @@ jobs:
           Get-ChildItem Function:\yarn -ErrorAction SilentlyContinue
           Get-Command yarn -ErrorAction SilentlyContinue
       - name: enable yarn
+        shell: bash
         run: |-
+          set -x
           corepack enable yarn
-          corepack prepare --activate yarn@stable
+          corepack install --global yarn@stable || corepack prepare --activate yarn@stable
           yarn --version
         working-directory: ..  # prevent evaluation of package.json
       - name: install project
