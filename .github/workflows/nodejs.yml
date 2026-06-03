@@ -66,16 +66,17 @@ jobs:
         env:
           NODE_VERSION: '${{ matrix.node-version }}'
         run: |
+          set -eux
           case "$NODE_VERSION" in
           '26' )
-          npm install -g npm@latest
-          ;;
+            npm install -g npm@latest
+            ;;
           '24')
-          npm i -g npm@^11
-          ;;
+            npm i -g npm@^11
+            ;;
           '20' | '20.18.0')
-          npm i -g npm@^10
-          ;;
+            npm i -g npm@^10
+            ;;
           esac
           npm --version
       - name: install project
