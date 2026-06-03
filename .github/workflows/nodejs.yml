@@ -150,6 +150,7 @@ jobs:
           if [ "$YARN_MAJOR" -ge 4 ]; then
             export YARN_ENABLE_HARDENED_MODE=0
           fi
+          echo > yarn.lock
           yarn install
       # proven: the package can be installed. that's enough for a meta-package
   test-pnpm-install:
