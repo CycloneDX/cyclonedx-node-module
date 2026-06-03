@@ -68,15 +68,15 @@ jobs:
         run: |
           set -eux
           case "$NODE_VERSION" in
-          '26' )
-            npm install -g npm@latest
-            ;;
-          '24')
-            npm i -g npm@^11
-            ;;
-          '20' | '20.18.0')
-            npm i -g npm@^10
-            ;;
+            '26' )
+              npm install -g npm@latest
+              ;;
+            '24')
+              npm i -g npm@^11
+              ;;
+            '20' | '20.18.0')
+              npm i -g npm@^10
+              ;;
           esac
           npm --version
       - name: install project
@@ -139,16 +139,16 @@ jobs:
           Get-Command yarn -ErrorAction SilentlyContinue
       - name: enable yarn
         shell: bash
-        run: |-
+        run: |
           set -eux
           corepack enable yarn
           case "$NODE_VERSION" in
-          '14' | '16' )
-          corepack prepare --activate yarn@latest
-          ;;
-          '*')
-          corepack install --global yarn@stable
-          ;;
+            '14' | '16' )
+              corepack prepare --activate yarn@latest
+              ;;
+            *)
+              corepack install --global yarn@stable
+              ;;
           esac
           yarn --version
         env:
