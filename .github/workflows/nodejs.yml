@@ -161,12 +161,15 @@ jobs:
         shell: bash
         run: echo  > yarn.lock
       - name: install project
-        run: > 
-          yarn install
-          --immutable
-          --inline-builds
-        #env:
-        #  YARN_ENABLE_HARDENED_MODE: "0"
+        shell: bash
+        run: |
+          set -eux
+          YARN_VERSION=$(yarn --version)
+          YARN_MAJOR=${YARN_VERSION%%.*}
+          if [ "$YARN_MAJOR" -ge 4 ]; then
+            export YARN_ENABLE_HARDENED_MODE=0
+          fi
+          yarn install --immutable --inline-builds
       # proven: the package can be installed. that's enough for a meta-package
   test-pnpm-install:
     name: PNPM install (node${{ matrix.node-version }}, ${{ matrix.os }})
