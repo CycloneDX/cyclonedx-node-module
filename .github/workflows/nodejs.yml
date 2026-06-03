@@ -120,7 +120,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           package-manager-cache: false  # must not usecaches. we want the latest, always
-      - name: enable yarn
+      - name: Setup Yarn
         shell: bash
         run: |
           set -eux
