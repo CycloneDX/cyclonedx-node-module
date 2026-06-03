@@ -127,10 +127,10 @@ jobs:
           npm uninstall -g yarn
           corepack enable yarn
           case "$NODE_VERSION" in
-            '14')
+            '14' | '16')
               corepack prepare --activate yarn@3.8.7
               ;;
-            '16')
+            '18')
               corepack prepare --activate yarn@4.0.0
               ;;
             *)
