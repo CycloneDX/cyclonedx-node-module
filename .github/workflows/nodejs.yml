@@ -52,6 +52,22 @@ jobs:
           - os: macos-latest # macos-latest has issues with node14
             node-version: "14"
     steps:
+      - name: bump npm
+        shell: bash
+        env:
+          NODE_VERSION: '${{ matrix.node-version }}'
+        run:
+          case "$NODE_VERSION" in
+          '26' )
+          npm install -g npm@latest
+          ;;
+          '24')
+          npm i -g npm@^11
+          ;;
+          '20' | '20.18.0')
+          npm i -g npm@^10
+          ;;
+          esac
       - name: test npm
         run: npm --version
       - name: Checkout
@@ -124,10 +140,19 @@ jobs:
       - name: enable yarn
         shell: bash
         run: |-
-          set -x
+          set -eux
           corepack enable yarn
-          corepack install --global yarn@stable || corepack prepare --activate yarn@stable
+          case "$NODE_VERSION" in
+          '14' | '16' )
+          corepack prepare --activate yarn@latest
+          ;;
+          '*')
+          corepack install --global yarn@stable
+          ;;
+          esac
           yarn --version
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
         working-directory: ..  # prevent evaluation of package.json
       - name: create dummy lock
         shell: bash
