@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 <!-- any unreleased change goes here -->
 
+## 4.1.6 - 2026-07-10
+
 * Docs
   * Acknowledge native command for _pnpm_ (via [#406])
   * Fix link for _Bun_ (via [#382])
