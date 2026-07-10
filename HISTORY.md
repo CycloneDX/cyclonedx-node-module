@@ -7,9 +7,11 @@ All notable changes to this project will be documented in this file.
 <!-- any unreleased change goes here -->
 
 * Docs
+  * Acknowledge native command for _pnpm_ (via [#])
   * Fix link for _Bun_ (via [#382])
 
 [#382]: https://github.com/CycloneDX/cyclonedx-node-module/pull/382
+[#]: 
 
 ## 4.1.5 - 2026-03-19
 
